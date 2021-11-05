@@ -1,74 +1,47 @@
-import './EstilosLogin.css'
-import Title from './Componentes/Title/Title';
-import Label from './Componentes/Label/Label';
-import Input from './Componentes/Input/Input';
-import React,{ useState } from 'react';
+import react from "react";
+import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.css';
+import imagenUsuario from "../../Imagenes/UsuarioImagen.svg"
+import './Login.css';
+import imagenFondo from"../../Pantallas/Login/Imagenes/LoginImagen.jpeg"
 
 
-const Login = ()=> {
 
-    const [user, setUser] = useState('');
-    const[password,setPassword] =useState('');
-
+const Login = () => {
+  return (
     
-function Listener(name,value) {
-    if(name === 'usuario'){
-       setUser(value) 
-    }else{
+      <Container className="text-center" id="ContenedorPrincipal" >
+        <Row>
+          <Col lg={4} md={6} sm={12} className="text-center mt-5 p-3">
+              <img className="icon-img" src= {imagenUsuario} alt="Icono usuario"></img>
+            <Form>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Usuario</Form.Label>
+                <Form.Control  type="text" placeholder="Ingrese su usuario" />
+              </Form.Group>
 
-        setPassword(value)
-    }
+              <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Contraseña" />
+              </Form.Group>
+              <Button variant="primary btn-block" type="submit">
+                Ingresar
+              </Button>
+              <div className="text-center mt-3" >
+                  <a href="#"><small className="reset">Recuperar Contraseña</small></a> ||
+                  <a href="#"><small className="reset ml-2" >Registrate</small></a>
+              </div>
+            
+            </Form>
+          </Col>
+          <Col lg={4} md={6} sm={12}>
+              <img src={imagenFondo} alt="" id="ImagenFondo">
+              </img>
+          </Col>
+        </Row>
+      </Container>
     
-}
+  );
+};
 
-function HacerLogin() {
-    let cuenta = {user,password};
-    if(cuenta){
-        console.log('cuenta', cuenta);
-    }
-}
-
-
-    return (
-     <div className='login-container'>
-         <div className='login-content'>
-
-    
-         <Title text="Bienvenido!!"></Title>
-         <Label text="Usuario"></Label>
-         <Input atributo={{
-             id: 'usuario',
-             name: 'usuario',
-             type: 'text',
-             placeholder: 'Ingrese su usuario'
-
-         }}
-         listener={Listener}
-         ></Input>
-
-         <Label text="contraseña"></Label>
-         <Input atributo={{
-             id: 'contraseña',
-             name: 'contraseña',
-             type: 'password',
-             placeholder: 'Ingrese su Contraseña'
-
-         }}
-         listener={Listener}
-         ></Input>
-       <div className='submit-button-container'>
-       <button onClick={HacerLogin} className='submit-button'>
-             Ingresar
-         </button>
-       </div>
-       <div className='submit-button-container'>
-       <button  className='submit-button-register'>
-             Crear Nueva Cuenta
-         </button>
-       </div>
-        
-         </div>
-     </div>
-    );
-  }
-  export default Login;
+export default Login;
