@@ -1,4 +1,4 @@
-import react,{useState} from "react";
+import React,{useState} from "react";
 import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
 import imagenUsuario from "../../Imagenes/UsuarioImagen.svg"
@@ -85,8 +85,6 @@ const validacionContrasenia =(valor)=>{
 
 
     }
-  
-
 
   return (
     
