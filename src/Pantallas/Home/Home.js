@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { Nav, Button, NavItem, Card } from "react-bootstrap";
 import "./Home.css";
 
@@ -38,7 +38,6 @@ const Home = () => {
             <a href="#">
               <small className="reset">Login</small>
             </a>
-            //
           </div>
         </NavItem>
         <NavItem>

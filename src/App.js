@@ -1,5 +1,5 @@
 import React from 'react';
-//import {BrowserRouter,Route, Router} from 'react-router-dom'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
 
 
@@ -12,13 +12,14 @@ import Home from './Pantallas/Home/Home';
 
 function App() {
   return (
-  
-      <div className="App">
+   <BrowserRouter>
+   <Routes>
+     <Route path="Login" element={<Login/>}></Route>
+     <Route path="Home" element={<Home/>}></Route>
      
-     <Home></Home>
+   </Routes>
+   </BrowserRouter>
      
-     
-      </div>
    
   );
 }
