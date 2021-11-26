@@ -1,11 +1,16 @@
 import React from "react";
-import { Button,  Card } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/NavBar";
+import CrearPublicacionComponent from "../CrearPublicacion/CrearPublicacion";
+import Header from "../ComponentesVarios/Header";
+import "./Home.css"
+
 
 const Home = () => {
   return (
     <>
+    <Header/>
     <NavBar/>
+    <CrearPublicacionComponent/>
     </>
   );
 };

@@ -10,19 +10,24 @@ const NavBar = (idCategoria) => {
     <div>
       <Nav justify variant="tabs" defaultActiveKey="/home">
   <Nav.Item>
-    <Nav.Link href="/home">Active</Nav.Link>
+    <Nav.Link href="/home">Juegos</Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link href="/login">Loooonger NavLink</Nav.Link>
+    <Nav.Link href="/login">Conceptual</Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link eventKey="link-2">Link</Nav.Link>
+    <Nav.Link eventKey="link-2">Cine</Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link eventKey="link-3" >
-      Disabled
-    </Nav.Link>
+    <Nav.Link eventKey="link-6" >Danza</Nav.Link>
   </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-4" >Pintura</Nav.Link>
+  </Nav.Item>
+  <Nav.Item>
+    <Nav.Link eventKey="link-5" >Musica</Nav.Link>
+  </Nav.Item>
+
 </Nav>
 
     </div>);
