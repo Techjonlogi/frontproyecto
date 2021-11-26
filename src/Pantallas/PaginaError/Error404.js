@@ -1,8 +1,7 @@
-import React,{useState} from "react";
+import React from "react";
 import './Error404.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Nav } from "react-bootstrap";
-import NavBar from "../ComponentesVarios/NavBar";
+
 
 
 

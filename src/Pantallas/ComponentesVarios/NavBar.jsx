@@ -1,8 +1,11 @@
-import { Nav, Button, NavItem, Card } from "react-bootstrap";
+import { Nav} from "react-bootstrap";
 
 
 
-const NavBar = () => {
+const NavBar = (idCategoria) => {
+
+  
+
     return (
     <div>
       <Nav justify variant="tabs" defaultActiveKey="/home">
@@ -10,7 +13,7 @@ const NavBar = () => {
     <Nav.Link href="/home">Active</Nav.Link>
   </Nav.Item>
   <Nav.Item>
-    <Nav.Link eventKey="/Login">Loooonger NavLink</Nav.Link>
+    <Nav.Link href="/login">Loooonger NavLink</Nav.Link>
   </Nav.Item>
   <Nav.Item>
     <Nav.Link eventKey="link-2">Link</Nav.Link>

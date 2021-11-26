@@ -43,8 +43,6 @@ const Login = () => {
 
 }
 
-
-
 const validacionContrasenia =(valor)=>{
       
   if(expresiones.passwordExpresion.test(contrasenia.campoContrasenia)){
@@ -90,7 +88,7 @@ const validacionContrasenia =(valor)=>{
 
   return (
     
-      <Container className="text-center" id="ContenedorPrincipal" >
+      <Container className="bodyLogin" id="ContenedorPrincipal" >
         <Row>
           <Col lg={4} md={6} sm={12} className="text-center mt-5 p-5">
               <img className="icon-img" src= {imagenUsuario} alt="Icono usuario"></img>
@@ -108,8 +106,8 @@ const validacionContrasenia =(valor)=>{
                 Ingresar
               </Button>
               <div className="text-center mt-3" >
-                  <a href="#"><small className="reset">Recuperar Contraseña</small></a> ||
-                  <a href="#"><small className="reset ml-2" >Registrate</small></a>
+                  <a href="/Login"><small className="reset">Recuperar Contraseña</small></a> ||
+                  <a href="/Home"><small className="reset ml-2" >Registrate</small></a>
               </div>
             
             </Form>

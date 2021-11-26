@@ -1,6 +1,5 @@
 import React from "react";
-import { Nav, Button, NavItem, Card } from "react-bootstrap";
-import "./Home.css";
+import { Button,  Card } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/NavBar";
 
 const Home = () => {
