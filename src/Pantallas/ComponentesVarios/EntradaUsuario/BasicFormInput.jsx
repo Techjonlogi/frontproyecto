@@ -10,10 +10,10 @@ const BasicFormInput = ( props ) => {
 };
 
 BasicFormInput.defaultProps = {
-    groupId = 'BasicInputGroup',
-    labelId = 'BasicInputLabel',
-    label = 'Entrada de Usuario',
-    placeholder = 'Introduce alguna entrada'
+    groupId: 'BasicInputGroup',
+    labelId: 'BasicInputLabel',
+    label: 'Entrada de Usuario',
+    placeholder: 'Introduce alguna entrada'
 }
 
 export default BasicFormInput;
