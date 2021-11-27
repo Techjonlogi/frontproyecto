@@ -1,12 +1,19 @@
 import { Form } from 'react-bootstrap';
 
-const BasicFormEmail = () => {
+const BasicFormEmail = ( props ) => {
     return (
-        <Form.Group className="BasicEmailGroup">
-            <Form.Label id="BasicEmailLabel">Correo Electrónico</Form.Label>
-            <Form.Control className="FormControlInput" type="email" placeholder="Introduce tu correo electrónico"></Form.Control>
+        <Form.Group className="BasicFormEmailGroup" id={ props.groupId }>
+            <Form.Label id={ props.labelId }>{ props.label }</Form.Label>
+            <Form.Control className="FormControlInput" type="email" placeholder={ props.placeholder }></Form.Control>
         </Form.Group>
     );
 };
+
+BasicFormEmail.defaultProps = {
+    groupId: 'BasicFormEmailGroup',
+    labelId: 'BasicEmailLabel',
+    label: 'Correo Electrónico',
+    placeholder: 'Introduce tu correo electrónico'
+}
 
 export default BasicFormEmail;
