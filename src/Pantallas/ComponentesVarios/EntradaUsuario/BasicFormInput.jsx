@@ -1,19 +1,19 @@
 import { Form } from 'react-bootstrap';
 
-const BasicInput = ( props ) => {
+const BasicFormInput = ( props ) => {
     return (
-        <Form.Group className="BasicInputGroup" id={ props.groupId }>
+        <Form.Group className="BasicFormInputGroup" id={ props.groupId }>
             <Form.Label id={ props.labelId }>{ props.label }</Form.Label>
             <Form.Control type="text" placeholder={ props.placeholder }></Form.Control>
         </Form.Group>
     );
 };
 
-BasicInput.defaultProps = {
+BasicFormInput.defaultProps = {
     groupId = 'BasicInputGroup',
     labelId = 'BasicInputLabel',
     label = 'Entrada de Usuario',
     placeholder = 'Introduce alguna entrada'
 }
 
-export default BasicInput;
+export default BasicFormInput;
