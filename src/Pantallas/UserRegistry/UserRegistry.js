@@ -18,6 +18,7 @@ const UserRegistry = () => {
                 </Col>
                 <Col className="formColumn">
                     <Form id="UserInputForm">
+                        <Form.Label id="etiquetaPagina">Registro de Usuario</Form.Label>
                         <BasicFormInput labelId="etiquetaNombres" label="" placeholder="Nombres" />
                         <BasicFormInput labelId="etiquetaApellidos" label="" placeholder="Apellidos" />
                         <BasicFormInput labelId="etiquetaNombreUsuario" label="" placeholder="Nombre de Usuario" />
