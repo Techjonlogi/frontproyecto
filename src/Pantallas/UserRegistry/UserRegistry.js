@@ -2,7 +2,7 @@ import React from "react"
 import 'bootstrap/dist/css/bootstrap.css';
 import './UserRegistry.css';
 
-import { Container, Form, Row, Col, Button } from "react-bootstrap";
+import { Container, Form, Row, Col } from "react-bootstrap";
 import ImagenFondo from"../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
