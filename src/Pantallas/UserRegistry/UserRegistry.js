@@ -6,6 +6,7 @@ import { Container, Form, Row, Col, Button } from "react-bootstrap";
 import ImagenFondo from"../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
+import BasicFormPassword from "../ComponentesVarios/EntradaUsuario/BasicFormPassword";
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const UserRegistry = () => {
@@ -17,11 +18,12 @@ const UserRegistry = () => {
                 </Col>
                 <Col className="formColumn">
                     <Form id="UserInputForm">
-                        <BasicFormInput labelId="etiquetaNombres" label="Nombres" placeholder="Introduce tus nombres" />
-                        <BasicFormInput labelId="etiquetaApellidos" label="Apellidos" placeholder="Introduce tus apellidos" />
-                        <BasicFormInput labelId="etiquetaNombreUsuario" label="Nombre de Usuario" placeholder="Introduce un nombre de usuario" />
-                        <BasicFormEmail labelId="etiquetaEmail"/>
-                        <BasicButton buttonId="BotonRegistro" content="Registrar" />
+                        <BasicFormInput labelId="etiquetaNombres" label="" placeholder="Nombres" />
+                        <BasicFormInput labelId="etiquetaApellidos" label="" placeholder="Apellidos" />
+                        <BasicFormInput labelId="etiquetaNombreUsuario" label="" placeholder="Nombre de Usuario" />
+                        <BasicFormEmail labelId="etiquetaEmail" label="" placeholder="Correo Electrónico"/>
+                        <BasicFormPassword labelId="etiquetaContrasena" label="" placeholder="Contraseña"/>
+                        <BasicButton buttonId="BotonRegistro" content="Crear Cuenta" />
                     </Form>
                 </Col>
             </Row>
