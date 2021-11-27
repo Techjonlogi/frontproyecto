@@ -1,3 +1,21 @@
 html {
     background-color: #2B293A;
 }
+
+.UserRegistryContent {
+    background-color: #2B293A;
+    max-height: auto;
+}
+
+.formColumn {
+    height: 100%;
+}
+
+.imageColumn {
+    max-height: 100%;
+}
+
+#ImagenFondo {
+    max-width: 100%;
+    height: auto;
+}
