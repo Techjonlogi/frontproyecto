@@ -1,12 +1,12 @@
 import { Form } from 'react-bootstrap';
 
-const BasicEmail = () => {
+const BasicFormEmail = () => {
     return (
         <Form.Group className="BasicEmailGroup">
             <Form.Label id="BasicEmailLabel">Correo Electrónico</Form.Label>
-            <Form.Control type="email" placeholder="Introduce tu correo electrónico"></Form.Control>
+            <Form.Control className="FormControlInput" type="email" placeholder="Introduce tu correo electrónico"></Form.Control>
         </Form.Group>
     );
 };
 
-export default BasicEmail;
+export default BasicFormEmail;
