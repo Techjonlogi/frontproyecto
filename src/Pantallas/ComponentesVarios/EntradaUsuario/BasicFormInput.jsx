@@ -4,7 +4,7 @@ const BasicFormInput = ( props ) => {
     return (
         <Form.Group className="BasicFormInputGroup" id={ props.groupId }>
             <Form.Label id={ props.labelId }>{ props.label }</Form.Label>
-            <Form.Control type="text" placeholder={ props.placeholder }></Form.Control>
+            <Form.Control className="FromControlInput" type="text" placeholder={ props.placeholder }></Form.Control>
         </Form.Group>
     );
 };
