@@ -16,6 +16,23 @@ html {
     max-height: 100%;
 }
 
+#UserInputForm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.FormLabel {
+    display: block;
+    text-align: center;
+}
+
+.FormControlInput {
+    width: max-content;
+}
+
 .BasicEmailGroup {
     align-items: center;
 }

@@ -15,7 +15,7 @@ const UserRegistry = () => {
                     <img src={ imagenFondo } alt="" id="ImagenFondo" />
                 </Col>
                 <Col className="formColumn">
-                    <Form>
+                    <Form id="UserInputForm">
                         <BasicFormInput labelId="etiquetaNombres" label="Nombres" placeholder="Introduce tus nombres" />
                         <BasicFormInput labelId="etiquetaApellidos" label="Apellidos" placeholder="Introduce tus apellidos" />
                         <BasicFormInput labelId="etiquetaNombreUsuario" label="Nombre de Usuario" placeholder="Introduce un nombre de usuario" />
