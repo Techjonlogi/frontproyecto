@@ -19,22 +19,28 @@ html {
     max-height: auto;
 }
 
-#UserInputForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
 .FormLabel {
     display: grid;
     text-align: center;
     width: 130%;
 }
 
+.BasicFormInputGroup {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
 .FormControlInput {
     text-align: center;
     width: 130%;
+    background-color: transparent;
+}
+
+#UserInputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #ImagenFondo {
