@@ -2,13 +2,16 @@ import { Navbar, Row, Col } from "react-bootstrap";
 
 const NavBar = ( idCategoria ) => {
     return (
-      <Navbar>
+      <Navbar bg="dark" variant="dark">
         <Row>
-          <Col>
+          <Col className="BrandColumn">
+            <Navbar.Brand href="/Home">
+              Nombre Sitio
+            </Navbar.Brand>
           </Col>
-          <Col>
+          <Col className="SearchColumn">
           </Col>
-          <Col>
+          <Col className="LinkColumn">
           </Col>
         </Row>
       </Navbar>
