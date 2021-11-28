@@ -1,15 +1,15 @@
 import { Navbar, Row, Col } from "react-bootstrap";
+import BasicSearchBar from "../EntradaUsuario/BasicSearchBar";
 
 const NavBar = ( idCategoria ) => {
     return (
       <Navbar bg="dark" variant="dark">
         <Row>
           <Col className="BrandColumn">
-            <Navbar.Brand href="/Home">
-              Nombre Sitio
-            </Navbar.Brand>
+            <Navbar.Brand href="/Home">Nombre Sitio</Navbar.Brand>
           </Col>
           <Col className="SearchColumn">
+            <BasicSearchBar />
           </Col>
           <Col className="LinkColumn">
           </Col>
