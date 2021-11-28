@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const BasicDropdownButton = ( props ) => {
     return (
-        <DropdownButton className="BasicDropdownButton" id={ props.dropdownId } title={ props.title }>
+        <DropdownButton className="BasicDropdownButton" id={ props.dropdownId } title={ props.title } menuVariant={ props.menuVariant }>
             { props.items.map( ( item, index ) => (
                 <Dropdown.Item eventKey={ index }>{ item }</Dropdown.Item>
             ))}
@@ -14,12 +14,14 @@ const BasicDropdownButton = ( props ) => {
 BasicDropdownButton.defaultProps = {
     dropdownId: 'BasicDropdown',
     title: 'Empty Dropdown',
+    menuVariant: 'dark',
     items: []
 }
 
 BasicDropdownButton.propTypes = {
     dropdownId: PropTypes.string,
     title: PropTypes.string,
+    menuVariant: PropTypes.string,
     items: PropTypes.array
 }
 

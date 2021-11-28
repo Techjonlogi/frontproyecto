@@ -25,11 +25,20 @@ html {
     margin-bottom: 5%;
 }
 
+.BasicDropdownButton {
+    color: white;
+}
+
 .FormControlInput {
     color: white;
     text-align: center;
     width: auto;
     background-color: transparent;
+}
+
+#ImagenFondo {
+    max-width: 100%;
+    height: auto;
 }
 
 #etiquetaPagina {
@@ -49,7 +58,7 @@ html {
     width: 100%;
 }
 
-#ImagenFondo {
-    max-width: 100%;
-    height: auto;
+#BotonDropdown {
+    margin-top: 14%;
+    color: white;
 }
