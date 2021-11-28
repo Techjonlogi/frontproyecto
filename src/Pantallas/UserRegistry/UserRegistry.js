@@ -22,6 +22,7 @@ const UserRegistry = () => {
                         <Form.Label id="etiquetaPagina">Registro de Usuario</Form.Label>
                         <BasicFormInput labelId="etiquetaNombres" label="" placeholder="Nombres" />
                         <BasicFormInput labelId="etiquetaApellidos" label="" placeholder="Apellidos" />
+                        <BasicDropdownButton dropdownId="BotonDropdown" title="Tipo de Usuario" items={ [ 'Artista', 'Buscador de Talento' ] } />
                         <BasicFormInput labelId="etiquetaNombreUsuario" label="" placeholder="Nombre de Usuario" />
                         <BasicFormEmail labelId="etiquetaEmail" label="" placeholder="Correo Electrónico"/>
                         <BasicFormPassword labelId="etiquetaContrasena" label="" placeholder="Contraseña"/>
