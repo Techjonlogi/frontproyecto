@@ -1,6 +1,6 @@
 import React from "react";
 import { Button,  Card } from "react-bootstrap";
-import NavBar from "../ComponentesVarios/NavBar";
+import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 
 const Home = () => {
   return (
