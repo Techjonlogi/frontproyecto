@@ -7,6 +7,7 @@ import ImagenFondo from"../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 import BasicFormPassword from "../ComponentesVarios/EntradaUsuario/BasicFormPassword";
+import BasicDropdownButton from "../ComponentesVarios/Botones/BasicDropdownButton";
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const UserRegistry = () => {
