@@ -1,12 +1,15 @@
 import React from "react";
-import { Button,  Card } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 
 const Home = () => {
   return (
-    <>
-    <NavBar/>
-    </>
+    <Container className="HomeContent" fluid>
+      <Row>
+        <NavBar />
+      </Row>
+      <Row></Row>
+    </Container>
   );
 };
 // cada componente va aqui
