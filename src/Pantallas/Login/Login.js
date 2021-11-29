@@ -88,9 +88,9 @@ const validacionContrasenia =(valor)=>{
 
   return (
     
-      <Container className="bodyLogin" id="ContenedorPrincipal" >
+      <Container className="bodyLogin" id="ContenedorPrincipal" fluid>
         <Row>
-          <Col lg={4} md={6} sm={12} className="text-center mt-5 p-5">
+          <Col  className="text-center mt-5 p-5">
               <img className="icon-img" src= {imagenUsuario} alt="Icono usuario"></img>
             <Form>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -107,12 +107,12 @@ const validacionContrasenia =(valor)=>{
               </Button>
               <div className="text-center mt-3" >
                   <a href="/Login"><small className="reset">Recuperar Contraseña</small></a> ||
-                  <a href="/Home"><small className="reset ml-2" >Registrate</small></a>
+                  <a href="/Register"><small className="reset ml-2" >Registrate</small></a>
               </div>
             
             </Form>
           </Col>
-          <Col lg={4} md={6} sm={12}>
+          <Col >
               <img src={imagenFondo} alt="" id="ImagenFondo">
               </img>
           </Col>
