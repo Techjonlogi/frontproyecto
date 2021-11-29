@@ -44,3 +44,13 @@
 .BasicSearchInputGroup #BotonBuscar {
     margin-top: 19px;
 }
+
+.LinkColumn .LinkRow {
+    justify-content: end;
+}
+
+.LinkColumn .NavigationLink {
+    padding-top: 22px;
+    font-weight: bold;
+    color: white !important;
+}

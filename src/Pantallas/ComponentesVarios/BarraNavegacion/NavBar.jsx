@@ -3,6 +3,7 @@ import './NavBar.css';
 
 import { Navbar, Row, Col } from "react-bootstrap";
 import BasicSearchBar from "../EntradaUsuario/BasicSearchBar";
+import DynamicNavbarLinks from "./DynamicNavBarLinks";
 
 const NavBar = ( idCategoria ) => {
     return (
@@ -15,6 +16,7 @@ const NavBar = ( idCategoria ) => {
             <BasicSearchBar />
           </Col>
           <Col className="LinkColumn" >
+            <DynamicNavbarLinks />
           </Col>
         </Row>
       </Navbar>
