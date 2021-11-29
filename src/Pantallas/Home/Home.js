@@ -1,19 +1,18 @@
 import React from "react";
-import { Button,  Card } from "react-bootstrap";
-import NavBar from "../ComponentesVarios/NavBar";
+import 'bootstrap/dist/css/bootstrap.css';
+import './Home.css';
+
+import { Container, Row } from "react-bootstrap";
+import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 
 const Home = () => {
   return (
     <>
-    <NavBar/>
+      <NavBar />
+      <Container className="HomeContent" >
+      </Container>
     </>
   );
 };
-// cada componente va aqui
-// const DefinirComponente =(cosas)=> {
-//   switch
-
-// }
-//handleclick
 
 export default Home;
