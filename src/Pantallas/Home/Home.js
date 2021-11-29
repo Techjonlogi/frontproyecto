@@ -7,20 +7,11 @@ import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 
 const Home = () => {
   return (
-    <NavBar />
-    // <Container className="HomeContent" fluid>
-    //   <Row className="NavigationBarRow">
-    //     <NavBar />
-    //   </Row>
-    //   <Row></Row>
-    // </Container>
+    <>
+      <NavBar />
+      <Container></Container>
+    </>
   );
 };
-// cada componente va aqui
-// const DefinirComponente =(cosas)=> {
-//   switch
-
-// }
-//handleclick
 
 export default Home;
