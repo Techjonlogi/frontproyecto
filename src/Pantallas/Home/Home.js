@@ -9,7 +9,8 @@ const Home = () => {
   return (
     <>
       <NavBar />
-      <Container></Container>
+      <Container className="HomeContent" >
+      </Container>
     </>
   );
 };
