@@ -1,0 +1,26 @@
+.FormControlInput {
+    color: white;
+    text-align: center;
+    width: auto;
+    color: black;
+    
+}
+
+.ContenedorPublicacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .File{
+     align-items: center;
+ }
+
+.imputPublicacion{
+    color: black;
+}
+
+
+
+
+
