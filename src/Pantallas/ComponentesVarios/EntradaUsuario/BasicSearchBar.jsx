@@ -6,7 +6,7 @@ const SearchBar = ( props ) => {
     return (
         <Form.Group className="BasicSearchInputGroup">
             <InputGroup>
-                <Form.Control className="FormControlInput" type="text" placeholder={ props.placeholder }></Form.Control>
+                <Form.Control className="FormControlInput" id="SearchBar" type="text" placeholder={ props.placeholder }></Form.Control>
                 <BasicButton buttonId="BotonBuscar" content="Buscar" />
             </InputGroup>
         </Form.Group>
@@ -14,7 +14,7 @@ const SearchBar = ( props ) => {
 };
 
 SearchBar.defaultProps = {
-    placeholder: 'Introduce tu cadena de búsqueda'
+    placeholder: 'Introduce tu cadena de búsqueda...'
 }
 
 SearchBar.propTypes = {

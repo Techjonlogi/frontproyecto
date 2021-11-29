@@ -1,0 +1,46 @@
+.NavigationBar {
+    background-color: #242230;
+}
+
+#row {
+    background-color: #242230;
+    width: 100%;
+    max-height: 75px;
+}
+
+.BrandColumn {
+    max-height: 75px;
+}
+
+.SearchColumn {
+    max-height: 75px;
+}
+
+.LinkColumn {
+    max-height: 75px;
+}
+
+.BrandColumn .SiteLogoLink {
+    color: slateblue;
+    padding-top: 22px;
+    margin-left: 5%;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.BasicSearchInputGroup {
+    margin-left: 5%;
+    margin-right: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+.BasicSearchInputGroup .FormControlInput {
+    height: 10%;
+    margin-top: 20px;
+    background-color: transparent;
+}
+
+.BasicSearchInputGroup #BotonBuscar {
+    margin-top: 19px;
+}

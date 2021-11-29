@@ -1,15 +1,19 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import './Home.css';
+
 import { Container, Row } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 
 const Home = () => {
   return (
-    <Container className="HomeContent" fluid>
-      <Row>
-        <NavBar />
-      </Row>
-      <Row></Row>
-    </Container>
+    <NavBar />
+    // <Container className="HomeContent" fluid>
+    //   <Row className="NavigationBarRow">
+    //     <NavBar />
+    //   </Row>
+    //   <Row></Row>
+    // </Container>
   );
 };
 // cada componente va aqui
