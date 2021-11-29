@@ -4,14 +4,12 @@ import "./CrearPublicacion.css";
 const CrearPublicacionComponent = (idUsuario) => {
   return (
     <container className="ContenedorCrearPublicacion">
-      <Col xs={ 5 } className="File">
+      <Col xs={ 5 }>
         <Form.Group controlId="formFile" className="mb-3" accept="image/*">
           <Form.Label className="imputPublicacion">Seleccione el archivo a compartir</Form.Label>
           <Form.Control type="file" accept=".jpg,.png" />
         </Form.Group>
-      </Col>
-
-      <Col xs={ 5 }>
+   
         <Figure>
           <Figure.Image
             width={171}
@@ -21,8 +19,7 @@ const CrearPublicacionComponent = (idUsuario) => {
           />
           <Figure.Caption></Figure.Caption>
         </Figure>
-      </Col>
-      <Col xs={ 5 }>
+   
       
       
       <Form>
