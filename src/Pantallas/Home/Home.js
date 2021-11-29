@@ -1,24 +1,18 @@
 import React from "react";
-import NavBar from "../ComponentesVarios/NavBar";
-import CrearPublicacionComponent from "../CrearPublicacion/CrearPublicacion";
-import Header from "../ComponentesVarios/Header";
-import "./Home.css"
+import 'bootstrap/dist/css/bootstrap.css';
+import './Home.css';
 
+import { Container, Row } from "react-bootstrap";
+import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 
 const Home = () => {
   return (
     <>
-    <Header/>
-    <NavBar/>
-    <CrearPublicacionComponent/>
+      <NavBar />
+      <Container className="HomeContent" >
+      </Container>
     </>
   );
 };
-// cada componente va aqui
-// const DefinirComponente =(cosas)=> {
-//   switch
-
-// }
-//handleclick
 
 export default Home;

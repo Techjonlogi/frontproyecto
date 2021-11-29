@@ -1,0 +1,64 @@
+html {
+    background-color: #2B293A;
+}
+
+.UserRegistryContent {
+    background-color: #2B293A;
+    max-height: auto;
+    align-items: center;
+}
+
+.formColumn {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: auto;
+}
+
+.imageColumn {
+    max-height: auto;
+    width: 200%;
+}
+
+.BasicButton {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.BasicDropdownButton {
+    color: white;
+}
+
+.FormControlInput {
+    color: white;
+    text-align: center;
+    width: auto;
+    background-color: transparent;
+}
+
+#ImagenFondo {
+    max-width: 100%;
+    height: auto;
+}
+
+#etiquetaPagina {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+    font-size: larger;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#UserInputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#BotonDropdown {
+    margin-top: 14%;
+    color: white;
+}
