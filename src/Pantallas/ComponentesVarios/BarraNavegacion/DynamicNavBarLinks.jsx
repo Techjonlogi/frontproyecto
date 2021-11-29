@@ -1,8 +1,8 @@
-import { Nav, Row } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 const DynamicNavBarLinks = ( props ) => {
-    if( props.isLoggedIn == false )
+    if( props.isLoggedIn === false )
     {
         return (
             <>
