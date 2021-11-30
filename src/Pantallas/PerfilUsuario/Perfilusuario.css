@@ -36,6 +36,7 @@ dd {
 
 #UserInfoColumn {
     height: fit-content;
+    width: fit-content;
     border-radius: 10px;
     background-color: blue;
 }
@@ -48,13 +49,19 @@ dd {
     background-color: thistle;
 }
 
+#InformacionUsuarioPrincipal {
+    margin: 10px;
+    width: 270px;
+    height: fit-content;
+}
+
 #InformacionUsuarioCabeza {
-    width: 110%;
+    width: 245px;
     margin: 5px
 }
 
 #InformacionUsuarioCuerpo {
-    width: 110%;
+    width: 245px;
     margin: 5px;
     background-color: turquoise;
 }

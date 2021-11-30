@@ -4,7 +4,7 @@ import ImagenPerfil from "../../../Imagenes/UsuarioImagen.svg";
 
 const InformacionUsuario = ( props ) => {
     return (
-        <Container className="Capsula">
+        <Container className="Capsula" id="InformacionUsuarioPrincipal">
             <Container className="Capsula" id="InformacionUsuarioCabeza">
                 <img className="ProfileImage" src={ ImagenPerfil } alt="ImagenPerfil" ></img>
                 <Form>
