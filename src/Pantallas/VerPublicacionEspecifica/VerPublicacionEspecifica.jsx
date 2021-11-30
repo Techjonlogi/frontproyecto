@@ -10,14 +10,16 @@ const ComponenteVerpublicacion = () => {
     <Row>
         <Col>
         <img></img>
-        <Form>
+        <Form className="formInformacion">
             <Form.Group>
                 <Form.Label className="basicLabel">Nombre</Form.Label>
-                <Form.Control type= "text"></Form.Control>
-                <Form.Label className="basicLabel">Informacion General</Form.Label>
-                <Form.Control type= "text"></Form.Control>
+                <Form.Control type= "text" disabled className="basicInput"></Form.Control>
+                <Form.Label className="basicLabel" >Informacion General</Form.Label>
+                <Form.Control type= "text" disabled className="basicInput"></Form.Control>
                 <Form.Label className="basicLabel">Informacion Publicacion</Form.Label>
-                <Form.Control type= "text"></Form.Control>
+                <Form.Control type= "text" disabled className="basicInput"></Form.Control>
+                <Form.Label className="basicLabel">Calificacion</Form.Label>
+                <Form.Control type= "text" disabled className="basicInput"></Form.Control>
 
             </Form.Group>
         </Form>

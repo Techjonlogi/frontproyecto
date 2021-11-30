@@ -36,6 +36,7 @@ margin: auto;
 
  .basicLabel{
      color: black;
+
  }
 
   th {
@@ -45,4 +46,12 @@ margin: auto;
 td {
     border: 5px solid red;
     padding: 8px 0;
+}
+
+.basicInput{
+    width: 75%;
+}
+
+.formInformacion{
+    align-items: center;
 }
