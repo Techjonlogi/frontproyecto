@@ -23,9 +23,17 @@ margin: auto;
 
 .btnPublicar{
   width: 10%;
+  width: auto;
+  margin: 50px;
 
     
 }
+.btnCancelar{
+    width: 10%;
+    width: auto;
+   position: relative;
+      
+  }
 
 .formComentarios{
     align-items: center;
@@ -59,3 +67,9 @@ td {
 .formInformacion{
     align-items: center;
 }
+
+
+.inputImagen{
+    width: 75%;
+}
+
