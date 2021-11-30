@@ -34,9 +34,9 @@ margin: auto;
     justify-content: center;
   }
 
-  label{
-      color: black;
-  }
+ .basicLabel{
+     color: black;
+ }
 
   th {
     border: 5px solid red;
