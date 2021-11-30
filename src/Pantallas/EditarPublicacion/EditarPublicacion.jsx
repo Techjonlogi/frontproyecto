@@ -18,10 +18,15 @@ const EditarPublicacion =()=>{
                         <Form.Control type= "text"  className="basicInput" placeholder = "Ingrese nueva descripcion..."></Form.Control>
                         <Form.Label className="basicLabel">Nuevo Archivo</Form.Label>
                         <Form.Control className = "inputImagen" type="file" accept=".jpg,.png" />
-                        <Button className="btnPublicar">Guardar</Button>
+                        
+                        
         
                     </Form.Group>
+                    
+                    <Button className="btnCancelar">Cancelar</Button>
+                    <Button className="btnPublicar">Guardar</Button>
                 </Form>
+                
                 </Col>
                 
                 <Col>
