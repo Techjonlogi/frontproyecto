@@ -1,0 +1,48 @@
+.seccionComentarios{
+    align-items: center;
+    background-color:#2B293A ;
+    color: #2B293A;
+
+}
+
+.tablaComentarios{
+width: 50%;
+color:white;
+
+margin: auto;
+}
+
+.imputComentario{
+    margin: auto;
+    width: 50%;
+}
+
+.btnPublicar{
+  width: 10%;
+
+    
+}
+
+.formComentarios{
+    align-items: center;
+    justify-content: left;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  label{
+      color: black;
+  }
+
+  th {
+    border: 5px solid red;
+    padding: 8px 0;
+}
+td {
+    border: 5px solid red;
+    padding: 8px 0;
+}
