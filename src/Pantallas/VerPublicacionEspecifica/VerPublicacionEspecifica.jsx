@@ -12,11 +12,11 @@ const ComponenteVerpublicacion = () => {
         <img></img>
         <Form>
             <Form.Group>
-                <Form.Label>Nombre</Form.Label>
+                <Form.Label className="basicLabel">Nombre</Form.Label>
                 <Form.Control type= "text"></Form.Control>
-                <Form.Label>Informacion General</Form.Label>
+                <Form.Label className="basicLabel">Informacion General</Form.Label>
                 <Form.Control type= "text"></Form.Control>
-                <Form.Label>Informacion Publicacion</Form.Label>
+                <Form.Label className="basicLabel">Informacion Publicacion</Form.Label>
                 <Form.Control type= "text"></Form.Control>
 
             </Form.Group>
