@@ -58,11 +58,13 @@ dd {
 
 #InformacionUsuarioCabeza {
     width: 245px;
-    margin: 5px
+    margin: 5px;
+    margin-top: 10px;
 }
 
 #InformacionUsuarioCuerpo {
     width: 245px;
     margin: 5px;
+    margin-bottom: 10px;
     background-color: turquoise;
 }
