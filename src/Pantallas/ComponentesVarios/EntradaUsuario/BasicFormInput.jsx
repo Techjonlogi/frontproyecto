@@ -1,7 +1,9 @@
 import { Form } from 'react-bootstrap';
+import { useField } from 'formik';
 import PropTypes from 'prop-types';
 
 const BasicFormInput = ( props ) => {
+    const [ field, meta ] = useField( props );
     return (
         <Form.Group className="BasicFormInputGroup" id={ props.groupId }>
             <Form.Label className="FormLabel" id={ props.labelId }>{ props.label }</Form.Label>
