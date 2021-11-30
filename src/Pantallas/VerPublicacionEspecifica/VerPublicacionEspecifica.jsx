@@ -6,7 +6,7 @@ import "./VerPublicacion.css"
 const ComponenteVerpublicacion = () => {
     return(
 <>
-<section>
+<section className="seccionPublicacion">
     <Row>
         <Col>
         <img></img>

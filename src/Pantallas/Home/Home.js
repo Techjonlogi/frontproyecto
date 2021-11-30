@@ -6,6 +6,7 @@ import { Container, Row } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import CrearPublicacionComponent from "../CrearPublicacion/CrearPublicacion";
 import ComponenteVerPublicacion from "../VerPublicacionEspecifica/VerPublicacionEspecifica"
+import EditarPublicacion from "../EditarPublicacion/EditarPublicacion";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
       <NavBar />
       
       
-      <ComponenteVerPublicacion></ComponenteVerPublicacion>
+      <EditarPublicacion></EditarPublicacion>
       <Container className="HomeContent" >
       </Container>
     </>
