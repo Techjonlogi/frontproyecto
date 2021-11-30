@@ -24,7 +24,6 @@ const UserRegistry = () => {
         >
             { formik => (
                 <Container className="UserRegistryContent" fluid>
-                    { console.log(formik.values) }
                 <Row>
                     <Col className="imageColumn">
                         <img src={ ImagenFondo } alt="" id="ImagenFondo" />

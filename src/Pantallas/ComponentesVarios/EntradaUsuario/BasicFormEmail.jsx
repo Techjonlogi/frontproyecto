@@ -1,10 +1,16 @@
+import { useField } from 'formik';
 import { Form } from 'react-bootstrap';
 
 const BasicFormEmail = ( props ) => {
+    const [ field, meta ] = useField( props );
     return (
         <Form.Group className="BasicFormInputGroup" id={ props.groupId }>
-            <Form.Label className="FormLabel" id={ props.labelId }>{ props.label }</Form.Label>
-            <Form.Control className="FormControlInput" type="email" placeholder={ props.placeholder }></Form.Control>
+            <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
+            <Form.Control 
+                className="FormControlInput" type="email" placeholder={ props.placeholder }
+                { ...field }
+            >
+            </Form.Control>
         </Form.Group>
     );
 };
