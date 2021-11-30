@@ -6,8 +6,13 @@ const BasicFormInput = ( props ) => {
     const [ field, meta ] = useField( props );
     return (
         <Form.Group className="BasicFormInputGroup" id={ props.groupId }>
-            <Form.Label className="FormLabel" id={ props.labelId }>{ props.label }</Form.Label>
-            <Form.Control className="FormControlInput" type="text" id={ props.controlId } placeholder={ props.placeholder } onChange={ props.onChangeFunc }></Form.Control>
+            <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
+            <Form.Control 
+                className="FormControlInput" type="text" 
+                id={ props.controlId } placeholder={ props.placeholder }
+                { ...field }
+            >
+            </Form.Control>
         </Form.Group>
     );
 };
@@ -25,8 +30,7 @@ BasicFormInput.propTypes = {
     labelId: PropTypes.string,
     controlId: PropTypes.string,
     label: PropTypes.string,
-    placeholder: PropTypes.string,
-    onChangeFunc: PropTypes.func
+    placeholder: PropTypes.string
 }
 
 export default BasicFormInput;
