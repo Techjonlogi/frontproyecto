@@ -1,4 +1,5 @@
 import { Form } from 'react-bootstrap';
+import PropTypes from "prop-types";
 
 const BasicFormInput = ( props ) => {
     return (
@@ -14,6 +15,13 @@ BasicFormInput.defaultProps = {
     labelId: 'BasicInputLabel',
     label: 'Entrada de Usuario',
     placeholder: 'Introduce alguna entrada'
+}
+
+BasicFormInput.propTypes = {
+    groupId: PropTypes.string,
+    labelId: PropTypes.string,
+    label: PropTypes.string,
+    placeholder: PropTypes.string
 }
 
 export default BasicFormInput;
