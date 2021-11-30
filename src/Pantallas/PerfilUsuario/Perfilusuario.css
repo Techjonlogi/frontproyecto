@@ -38,6 +38,7 @@ dd {
     height: fit-content;
     width: fit-content;
     border-radius: 10px;
+    margin: 10px;
     background-color: blue;
 }
 
@@ -50,7 +51,7 @@ dd {
 }
 
 #InformacionUsuarioPrincipal {
-    margin: 10px;
+    margin: 7px;
     width: 270px;
     height: fit-content;
 }
