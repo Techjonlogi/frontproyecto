@@ -36,6 +36,11 @@ html {
     background-color: transparent;
 }
 
+.Error {
+    color: red !important;
+    align-self: center;
+}
+
 #ImagenFondo {
     max-width: 100%;
     height: auto;
