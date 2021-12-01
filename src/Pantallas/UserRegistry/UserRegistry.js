@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './UserRegistry.css';
 
+import * as Yup from 'yup';
 import { Formik } from "formik";
 import { Container, Form, Row, Col } from "react-bootstrap";
 import ImagenFondo from"../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
@@ -11,6 +12,29 @@ import BasicDropdownButton from "../ComponentesVarios/Botones/BasicDropdownButto
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const UserRegistry = () => {
+    const RegisterInput = Yup.object( {
+        nombres: Yup.string()
+            .min( 3, 'Debe tener por lo menos 3 caracteres.' )
+            .max( 40, 'Debe tener 40 caracteres o menos.')
+            .required( 'Requerido' ),
+        apellidos: Yup.string()
+            .min( 3, 'Debe tener por lo menos 3 caracteres.' )
+            .max( 40, 'Debe tener 40 caracteres o menos.')
+            .required( 'Requerido' ),
+        nombre_usuario: Yup.string()
+            .min( 3, 'Debe tener por lo menos 3 caracteres.' )
+            .max( 25, 'Debe tener 25 caracteres o menos.')
+            .required( 'Requerido' ),
+        correo_electronico: Yup.string()
+            .email( 'Correo inválido' )
+            .required( 'Correo requerido' ),
+        contrasena: Yup.string()
+            .min( 6, 'La contraseña debe tener por lo menos 3 caracteres.' )
+            .required( 'Contraseña requerido' ),
+        confirmar_contrasena: Yup.string()
+            .oneOf( [ Yup.ref( 'contrasena' ), null ], 'Las contraseñas deben coincidir')
+            .required( 'Por favor confirme su contraseña' ),
+    } )
     return (
         <Formik
             initialValues= { {
@@ -21,6 +45,7 @@ const UserRegistry = () => {
                 contrasena: '',
                 confirmar_contrasena: ''
             } }
+            validationSchema={ RegisterInput }
         >
             { formik => (
                 <Container className="UserRegistryContent" fluid>

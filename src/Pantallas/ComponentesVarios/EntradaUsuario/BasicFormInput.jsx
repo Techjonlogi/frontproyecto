@@ -1,5 +1,5 @@
 import { Form } from 'react-bootstrap';
-import { useField } from 'formik';
+import { ErrorMessage, useField } from 'formik';
 import PropTypes from 'prop-types';
 
 const BasicFormInput = ( props ) => {
@@ -13,6 +13,7 @@ const BasicFormInput = ( props ) => {
                 { ...field }
             >
             </Form.Control>
+            <ErrorMessage className="ErrorMessage" name={ field.name } />
         </Form.Group>
     );
 };

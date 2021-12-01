@@ -1,4 +1,4 @@
-import { useField } from 'formik';
+import { ErrorMessage, useField } from 'formik';
 import { Form } from 'react-bootstrap';
 
 const BasicFormEmail = ( props ) => {
@@ -11,6 +11,7 @@ const BasicFormEmail = ( props ) => {
                 { ...field }
             >
             </Form.Control>
+            <ErrorMessage className="ErrorMessage" name={ field.name } />
         </Form.Group>
     );
 };
