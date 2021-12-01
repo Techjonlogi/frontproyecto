@@ -2,8 +2,7 @@ import { Nav } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 const DynamicNavBarLinks = ( props ) => {
-    if( props.isLoggedIn === false )
-    {
+    if( props.token === null || props.token === "" ) {
         return (
             <>
                 <Nav className="LinkRow">
@@ -12,15 +11,25 @@ const DynamicNavBarLinks = ( props ) => {
                 </Nav>
             </>
         );
+    } else {
+        return (
+            <>
+                <Nav className="LinkRow">
+                    <Nav.Link className="NavigationLink" href="/Perfil">Perfil</Nav.Link>
+                    <Nav.Link className="NavigationLink" href="/Home">Mensajes</Nav.Link>
+                    <Nav.Link className="NavigationLink" href="/Publicar">Publicar</Nav.Link>
+                </Nav>
+            </>
+        );
     }
 };
 
 DynamicNavBarLinks.defaultProps = {
-    isLoggedIn: false
+    token: ""
 }
 
 DynamicNavBarLinks.propTypes = {
-    isLoggedIn: PropTypes.bool
+    token: PropTypes.string
 }
 
 export default DynamicNavBarLinks;
