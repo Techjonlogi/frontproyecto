@@ -63,7 +63,7 @@ const UserRegistry = () => {
                             <BasicFormEmail labelId="etiquetaEmail" label="" name="correo_electronico" placeholder="Correo Electrónico"/>
                             <BasicFormPassword labelId="etiquetaContrasena" label="" name="contrasena" placeholder="Contraseña"/>
                             <BasicFormPassword labelId="etiquetaConfirmarContrasena" label="" name="confirmar_contrasena" placeholder="Confirmar Contraseña"/>
-                            <BasicButton buttonId="BotonRegistro" content="Crear Cuenta" />
+                            <BasicButton buttonId="BotonRegistro" content="Crear Cuenta" buttonType="submit"/>
                         </Form>
                     </Col>
                 </Row>
