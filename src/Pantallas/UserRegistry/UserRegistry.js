@@ -30,7 +30,7 @@ const UserRegistry = () => {
             .required( 'Correo requerido' ),
         contrasena: Yup.string()
             .min( 6, 'La contraseña debe tener por lo menos 3 caracteres.' )
-            .required( 'Contraseña requerido' ),
+            .required( 'Contraseña requerida' ),
         confirmar_contrasena: Yup.string()
             .oneOf( [ Yup.ref( 'contrasena' ), null ], 'Las contraseñas deben coincidir')
             .required( 'Por favor confirme su contraseña' ),

@@ -8,12 +8,13 @@ const BasicFormInput = ( props ) => {
         <Form.Group className="BasicFormInputGroup" id={ props.groupId }>
             <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
             <Form.Control 
-                className="FormControlInput" type="text" 
+                className={ `FormControlInput ${ meta.touched && meta.error && 'is-invalid' }` }
+                type="text" 
                 id={ props.controlId } placeholder={ props.placeholder }
                 { ...field }
             >
             </Form.Control>
-            <ErrorMessage className="ErrorMessage" name={ field.name } />
+            <ErrorMessage className="Error" name={ field.name } component="div" />
         </Form.Group>
     );
 };

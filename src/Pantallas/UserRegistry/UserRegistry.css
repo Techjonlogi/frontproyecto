@@ -36,8 +36,8 @@ html {
     background-color: transparent;
 }
 
-.BasicFormInputGroup .ErrorMessage {
-    color: red;
+.Error {
+    color: red !important;
 }
 
 #ImagenFondo {
