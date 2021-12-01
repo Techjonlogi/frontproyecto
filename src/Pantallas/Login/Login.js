@@ -31,7 +31,11 @@ const Login = () => {
           data,
           ConfigNoAuth
         ).then( ( response ) => {
-          console.log( response.data );
+          if( response.status === 200 ) {
+            localStorage.setItem( "Token", response.data.access_token );
+            localStorage.setItem( "KeyID", response.data.clave_usuario );
+            window.location.replace( "http://localhost:3000/Home" );
+          }
         } ).catch( ( e ) => {
           console.log( e.response.status );
           console.log( e.response.data );
