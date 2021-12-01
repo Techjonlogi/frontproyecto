@@ -67,7 +67,7 @@ const UserRegistry = () => {
                         </Form>
                     </Col>
                 </Row>
-            </Container>
+                </Container>
             ) }
         </Formik>
     );
