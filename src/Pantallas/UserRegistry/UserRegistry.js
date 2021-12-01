@@ -3,6 +3,9 @@ import './UserRegistry.css';
 
 import { Formik } from "formik";
 import { Container, Form, Row, Col } from "react-bootstrap";
+import Api from "../ComponentesVarios/Utilidades/Api/Api";
+import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/ApiConfigurations";
+import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import RegisterInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/RegisterInputSchema";
 import ImagenFondo from "../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
@@ -23,6 +26,27 @@ const UserRegistry = () => {
                 confirmar_contrasena: ''
             } }
             validationSchema={ RegisterInputSchema }
+            onSubmit={ async ( values ) => {
+                console.log( "sending API request..." );
+                const data = {
+                    nombres: values.nombres,
+                    apellidos: values.apellidos,
+                    nombre_usuario: values.nombre_usuario,
+                    contrasena: values.contrasena,
+                    correo_electronico: values.correo_electronico
+                };
+
+                await Api.post(
+                    Endpoints.usuarios,
+                    data,
+                    ConfigNoAuth
+                ).then( ( response ) => {
+                    console.log( response.data );
+                } ).catch( ( e ) => {
+                    console.log( e.response.status );
+                    console.log( e.response.data );
+                } );
+            } }
         >
             { formik => (
                 <Container className="UserRegistryContent" fluid>
@@ -31,7 +55,7 @@ const UserRegistry = () => {
                         <img src={ ImagenFondo } alt="" id="ImagenFondo" />
                     </Col>
                     <Col className="formColumn">
-                        <Form id="UserInputForm">
+                        <Form id="UserInputForm" onSubmit={ formik.handleSubmit }>
                             <Form.Label id="etiquetaPagina">Registro de Usuario</Form.Label>
                             <BasicFormInput labelId="etiquetaNombres" controlId="controlNombres" label="" name="nombres" placeholder="Nombres"/>
                             <BasicFormInput labelId="etiquetaApellidos" controlId="controlApellidos" label="" name="apellidos" placeholder="Apellidos" />
