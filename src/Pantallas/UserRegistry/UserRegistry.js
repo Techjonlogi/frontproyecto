@@ -27,7 +27,6 @@ const UserRegistry = () => {
             } }
             validationSchema={ RegisterInputSchema }
             onSubmit={ async ( values ) => {
-                console.log( "sending API request..." );
                 const data = {
                     nombres: values.nombres,
                     apellidos: values.apellidos,

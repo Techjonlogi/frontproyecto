@@ -1,5 +1,6 @@
 const Endpoints = {
-    usuarios: "/usuarios"
+    usuarios: "/usuarios",
+    login: "/login"
 }
 
 export default Endpoints;

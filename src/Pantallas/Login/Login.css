@@ -11,6 +11,11 @@
     border-color: #CF3C3C !important;
 }
 
+.UserInfoColumn {
+    align-items: center;
+    text-align: center;
+}
+
 #bodyLogin{
     background-color: #2B293A;
 }

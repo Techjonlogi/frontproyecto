@@ -16,84 +16,6 @@ import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 
 const Login = () => {
-
-
-  const expresiones = {
-    usuarioExpresion: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-    nombreExpresion: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-    passwordExpresion: /^.{4,12}$/, // 4 a 12 digitos.
-    correoExpresion: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    telefonoExpresion: /^\d{7,14}$/ // 7 a 14 numeros.
-  }
-
-
-  const [usuario,cambiarUsuario] = useState({ nombreUsuario:'', valido: ''});
-  const [contrasenia,cambiarContrasenia] = useState({campoContrasenia:'', valido: ''});
-
-
-  const validacion =(valor)=>{
-      
-    if(expresiones.usuarioExpresion.test(usuario.nombreUsuario)){
-      console.log('input correcto')
-      cambiarUsuario({...usuario,nombreUsuario:valor ,valido:'true'});
-      const inputUsuario = document.getElementById('inputUsuario');
-      inputUsuario.style.borderColor ="#ced4da";
-    
-      
-    }else{
-      console.log('input incorrecto')
-      cambiarUsuario({...usuario,nombreUsuario:valor ,valido:'false'});
-      const inputUsuario = document.getElementById('inputUsuario');
-      inputUsuario.style.borderColor ="#FF0000";
-    
-    }
-
-
-}
-
-const validacionContrasenia =(valor)=>{
-      
-  if(expresiones.passwordExpresion.test(contrasenia.campoContrasenia)){
-    cambiarContrasenia({...contrasenia,campoContrasenia:valor ,valido:'true'});
-    const inputContrasenia = document.getElementById('inputContrasenia');
-    inputContrasenia.style.borderColor ="#ced4da";
- 
-
-  }else{
-    console.log('input incorrecto')
-    cambiarContrasenia({...contrasenia,campoContrasenia:valor ,valido:'false'});
-    const inputContrasenia = document.getElementById('inputContrasenia');
-    inputContrasenia.style.borderColor ="#FF0000";
-  }
-
-}
-
-  const onChange = (e) =>{
-
-    validacion(e.target.value);
-
-  }
-
-  const onChangeContrasenia = (e) =>{
-    
-    validacionContrasenia(e.target.value);
-  
-    }
-
-    const HacerLogin =()=>{
-      if(contrasenia.valido==='true'){
-        if (usuario.valido ==='true'){
-          console.log(contrasenia.campoContrasenia,usuario.nombreUsuario);
-
-        }else{
-          console.log('Error con el usuario')
-        }
-
-      }else{console.log('error en la contrasenia')}
-
-
-    }
-
   return (
     <Formik
       InitialValues= { {
@@ -101,13 +23,21 @@ const validacionContrasenia =(valor)=>{
         contrasena: ''  
       } }
       validationSchema= { LoginInputSchema }
+      onSubmit= { async ( values ) => {
+        const data = {
+          username: values.nombre_usuario,
+          password: values.contrasena
+        }
+
+        await Api.post()
+      } }
     >
       { formik => (
         <Container className="bodyLogin" id="ContenedorPrincipal" fluid>
           <Row>
-            <Col className="text-center mt-5 p-5">
+            <Col className="UserInfoColumn mt-5 p-5">
               <img className="icon-img" src= { imagenUsuario } alt="Icono usuario"></img>
-              <Form>
+              <Form onSubmit={ formik.handleSubmit }>
                 <BasicFormInput groupId="formBasicEmail" label="Usuario" controlId="inputUsuario" name="nombre_usuario" placeholder="Ingrese su nombre de usuario"/>
                 <BasicFormPassword groupId="formBasicPassword" label="Contraseña" controlId="inputContrasena" name="contrasena" placeholder="Contraseña"/>
                 <BasicButton content="Ingresar"/>
