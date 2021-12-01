@@ -38,6 +38,7 @@ html {
 
 .Error {
     color: red !important;
+    align-self: center;
 }
 
 #ImagenFondo {

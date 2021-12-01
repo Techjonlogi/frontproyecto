@@ -12,7 +12,7 @@ const BasicFormPassword = ( props ) => {
                 { ...field }
             >
             </Form.Control>
-            <ErrorMessage className="ErrorMessage" name={ field.name } component="div" />
+            <ErrorMessage className="Error" name={ field.name } component="div" />
         </Form.Group>
     );
 };
