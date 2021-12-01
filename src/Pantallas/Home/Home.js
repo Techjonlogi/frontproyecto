@@ -4,8 +4,6 @@ import './Home.css';
 
 import { Container } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
-import CrearPublicacionComponent from "../CrearPublicacion/CrearPublicacion";
-import ComponenteVerPublicacion from "../VerPublicacionEspecifica/VerPublicacionEspecifica"
 import EditarPublicacion from "../EditarPublicacion/EditarPublicacion";
 
 const Home = () => {

@@ -11,31 +11,51 @@
     border-color: #CF3C3C !important;
 }
 
+.UserInfoColumn {
+    align-items: center;
+    text-align: center;
+}
+
+.LigasContainer {
+    text-align: left;
+    background-color: #2B293A !important;
+}
+
+.UserInputForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BasicFormInputGroup {
+    align-items: center;
+    margin: 8px;
+}
+
+.BasicFormInputGroup #inputUsuario {
+    width: 300px;
+}
+
 #bodyLogin{
     background-color: #2B293A;
 }
 
 #ContenedorPrincipal{
-
-background-color: #2B293A;
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 100%;
-
+    background-color: #2B293A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #ImagenFondo{
-
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 150%;
-
 }
 
 label{
-
     color:white;
 }
