@@ -8,6 +8,8 @@ import Error404 from './Pantallas/PaginaError/Error404';
 import CrearPublicacionComponent from './Pantallas/CrearPublicacion/CrearPublicacion';
 import PerfilUsuario from './Pantallas/PerfilUsuario/PerfilUsuario';
 import UserRegistry from './Pantallas/UserRegistry/UserRegistry';
+import verComentariosAdmin from './Pantallas/verComentarioAdmin/verListacomentarios';
+
 
 
 function App() {
