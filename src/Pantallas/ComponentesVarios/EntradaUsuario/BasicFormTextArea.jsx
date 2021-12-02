@@ -2,14 +2,14 @@ import { Form } from 'react-bootstrap';
 import { ErrorMessage, useField } from 'formik';
 import PropTypes from 'prop-types';
 
-const BasicFormTextArea = () => {
+const BasicFormTextArea = ( props ) => {
     const [ field, meta ] = useField( props );
     return (
         <Form.Group className="BasicFormTextArea" id={ props.groupId }>
             <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
             <Form.Control 
                 className={ `FormControlInput ${ meta.touched && meta.error && 'is-invalid' }` }
-                type="textarea"
+                as="textarea"
                 id={ props.controlId } placeholder={ props.placeholder }
                 { ...field }
             >
@@ -19,7 +19,7 @@ const BasicFormTextArea = () => {
     );
 };
 
-BasicFormInput.defaultProps = {
+BasicFormTextArea.defaultProps = {
     groupId: 'BasicFormInputGroup',
     labelId: 'BasicInputLabel',
     controlId: 'UserInput',
@@ -27,7 +27,7 @@ BasicFormInput.defaultProps = {
     placeholder: 'Introduce alguna entrada'
 }
 
-BasicFormInput.propTypes = {
+BasicFormTextArea.propTypes = {
     groupId: PropTypes.string,
     labelId: PropTypes.string,
     controlId: PropTypes.string,
