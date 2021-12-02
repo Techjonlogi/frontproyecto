@@ -6,6 +6,7 @@ import { Container, FloatingLabel, Form, Figure, Button, Col, Row } from "react-
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import BasicFormFileInput from "../ComponentesVarios/EntradaUsuario/BasicFormFileInput";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
+import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const CrearPublicacion = () => {
   return (
@@ -29,6 +30,7 @@ const CrearPublicacion = () => {
                     <BasicFormFileInput />
                     <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion"/>
                     <BasicFormInput labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" />
+                    <BasicButton content="Crear Publicación"/>
                   </Form>
                 </Container>
               </Col>
