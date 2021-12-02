@@ -16,7 +16,7 @@ const NavBar = ( idCategoria ) => {
             <BasicSearchBar />
           </Col>
           <Col className="LinkColumn" >
-            <DynamicNavbarLinks />
+            <DynamicNavbarLinks token={ localStorage.getItem( "Token" ) }/>
           </Col>
         </Row>
       </Navbar>
