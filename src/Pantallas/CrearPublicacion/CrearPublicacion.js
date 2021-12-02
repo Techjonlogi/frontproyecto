@@ -4,8 +4,10 @@ import "./CrearPublicacion.css";
 import { Formik } from "formik";
 import { Container, FloatingLabel, Form, Figure, Button, Col, Row } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
+import BasicFormFileInput from "../ComponentesVarios/EntradaUsuario/BasicFormFileInput";
+import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 
-const CrearPublicacionComponent = () => {
+const CrearPublicacion = () => {
   return (
     <Formik
       initialValues= { {
@@ -24,6 +26,9 @@ const CrearPublicacionComponent = () => {
                 <Container id="FormContainer">
                   <Form>
                     <Form.Label>Crear Publicación</Form.Label>
+                    <BasicFormFileInput />
+                    <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion"/>
+                    <BasicFormInput labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" />
                   </Form>
                 </Container>
               </Col>
@@ -74,4 +79,4 @@ const CrearPublicacionComponent = () => {
   );
 };
 
-export default CrearPublicacionComponent;
+export default CrearPublicacion;
