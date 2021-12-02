@@ -9,6 +9,10 @@
     height: 100%;
 }
 
+.BasicFormInputGroup {
+    padding: 5px;
+}
+
 #EmptyLeftColumn {
     background-color: #2B293A !important;
 }
@@ -34,6 +38,21 @@
     padding: 3%;
 }
 
+#PublicationContentLabel {
+    font-weight: bold;
+    font-size: larger;
+}
+
 #CreatePublicationForm {
+    width: 100%;
     margin: 10px;
+}
+
+#controlNombrePublicacion {
+    width: 100%;
+}
+
+#controlDescripcion {
+    width: 100%;
+    height: 100px;
 }
