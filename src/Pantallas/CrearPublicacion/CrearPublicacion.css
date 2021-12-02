@@ -1,26 +1,27 @@
-.FormControlInput {
-    color: white;
-    text-align: center;
-    width: auto;
-    color: black;
-    
-}
-
-.ContenedorCrearPublicacion{
-    display: flex;
-    justify-content: center;
+.CreatePublicationContent {
+    background-color: #2B293A;
     align-items: center;
- }
-
- .File{
-     align-items: center;
- }
-
-.imputPublicacion{
-    color: black;
+    height: 95vh;
+    width: auto;
 }
 
+.BodyRow {
+    height: 100%;
+}
 
+#EmptyLeftColumn {
+    background-color: blue;
+}
 
+#CreatePublicationColumn {
+    background-color: #2B293A;
+}
 
+#EmptyRightColumn {
+    background-color: blue;
+}
 
+#FormContainer {
+    background-color: #242230;
+    padding: 3%;
+}
