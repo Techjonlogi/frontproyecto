@@ -7,6 +7,7 @@ import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import BasicFormFileInput from "../ComponentesVarios/EntradaUsuario/BasicFormFileInput";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 import BasicFormTextArea from "../ComponentesVarios/EntradaUsuario/BasicFormTextArea";
+import BasicFormSelect from "../ComponentesVarios/EntradaUsuario/BasicFormSelect";
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const CrearPublicacion = () => {
@@ -20,6 +21,7 @@ const CrearPublicacion = () => {
     >
       { formik => (
         <>
+        { console.log( formik.values) }
           <NavBar />
           <Container className="CreatePublicationContent" fluid>
             <Row className="BodyRow">
@@ -27,10 +29,11 @@ const CrearPublicacion = () => {
               <Col id="CreatePublicationColumn" sm={ 6 }>
                 <Container id="FormContainer">
                   <Form>
-                    <Form.Label>Crear Publicación</Form.Label>
+                    <Form.Label id="PublicationContentLabel">Crear Publicación</Form.Label>
                     <BasicFormFileInput />
                     <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion"/>
                     <BasicFormTextArea labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" />
+                    <BasicFormSelect labelId="etiquetaCategoria" label="Categoria de Publicación" selectId="selectCategoria" name="categoria" options={ [ 'Digital', 'Pintura' ] }/>
                     <BasicButton content="Crear Publicación"/>
                   </Form>
                 </Container>
