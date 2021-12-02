@@ -17,13 +17,13 @@ const CrearPublicacion = () => {
       initialValues= { {
         nombre_publicacion: '',
         descripcion_publicacion: '',
-        categoria: ''
+        categoria: '',
+        archivo: null
       } }
       validationSchema= { PublicationinputSchema }
     >
       { formik => (
         <>
-        { console.log( formik.values) }
           <NavBar />
           <Container className="CreatePublicationContent" fluid>
             <Row className="BodyRow">
