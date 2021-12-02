@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const BasicFormSelect = ( props ) => {
     const [ field, meta ] = useField( props );
     return (
-        <Form.Group className="BasicFormSelectGroup" id={ props.groupId } >
+        <Form.Group className="BasicFormInputGroup" id={ props.groupId } >
             <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
             <Form.Select 
                 className={ `FormSelect ${ meta.touched && meta.error && 'is-invalid' }` }

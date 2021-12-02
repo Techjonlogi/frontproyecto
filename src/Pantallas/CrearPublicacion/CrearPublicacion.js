@@ -28,7 +28,7 @@ const CrearPublicacion = () => {
               <Col id="EmptyLeftColumn" sm={ 3 }></Col>
               <Col id="CreatePublicationColumn" sm={ 6 }>
                 <Container id="FormContainer">
-                  <Form>
+                  <Form id="CreatePublicationForm">
                     <Form.Label id="PublicationContentLabel">Crear Publicación</Form.Label>
                     <BasicFormFileInput />
                     <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion"/>
