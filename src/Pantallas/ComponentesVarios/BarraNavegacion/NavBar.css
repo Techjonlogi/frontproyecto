@@ -50,7 +50,9 @@
 }
 
 .LinkColumn .NavigationLink {
-    padding-top: 22px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 25px;
     font-weight: bold;
     color: white !important;
 }
