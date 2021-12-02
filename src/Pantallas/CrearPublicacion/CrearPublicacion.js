@@ -32,7 +32,7 @@ const CrearPublicacion = () => {
                 <Container id="FormContainer">
                   <Form id="CreatePublicationForm" onSubmit={ formik.handleSubmit }>
                     <Form.Label id="PublicationContentLabel">Crear Publicación</Form.Label>
-                    <BasicFormFileInput />
+                    <BasicFormFileInput name="archivo"/>
                     <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion"/>
                     <BasicFormTextArea labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" />
                     <BasicFormSelect labelId="etiquetaCategoria" label="Categoria de Publicación" selectId="selectCategoria" name="categoria" options={ [ 'Digital', 'Pintura' ] }/>
