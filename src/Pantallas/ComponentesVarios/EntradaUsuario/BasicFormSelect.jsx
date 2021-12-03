@@ -12,9 +12,9 @@ const BasicFormSelect = ( props ) => {
                 id={ props.selectId }
                 { ...field }
             >
-                <option>{ props.placeholder }</option>
+                <option key={ -1000 } value={ -1 }>{ props.placeholder }</option>
                 { props.options.map( ( option, index ) => (
-                    <option value={ index }>{ option }</option>
+                    <option key={ index } value={ index }>{ option }</option>
                 ) ) }
             </Form.Select>
             <ErrorMessage className="Error" name={ field.name } component="div" />

@@ -14,7 +14,7 @@ const PublicationinputSchema = Yup.object( {
         .required( 'Por favor introduzca una descripción' ),
     categoria: Yup.number( 'Por favor seleccione una categoria' )
         .required( 'Por favor seleccione una categoria' )
-        .min( 0 )
+        .min( 0, 'Por favor seleccione una categoria' )
         .max( 20 )
         .integer(),
     archivo: Yup.mixed()
