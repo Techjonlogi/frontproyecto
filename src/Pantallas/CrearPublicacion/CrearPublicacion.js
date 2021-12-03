@@ -30,10 +30,10 @@ const CrearPublicacion = () => {
             nombre_publicacion: values.nombre_publicacion,
             descripcion: values.descripcion_publicacion,
             categoria: values.categoria,
-            multimedia: ConvertToBase64( values.archivo )
+            multimedia: ( await ConvertToBase64( values.archivo ) )
           }
 
-          console.log( ConvertToBase64( values.archivo ) );
+          console.log( publicationData );
           await Api.post(
             Endpoints.publicacionesUsuario + "/" + localStorage.getItem( "KeyID" ),
             publicationData,
