@@ -3,6 +3,7 @@ import "./CrearPublicacion.css";
 
 import { Formik } from "formik";
 import { Container, Form, Figure, Col, Row } from "react-bootstrap";
+import { ConvertToBase64 } from "../ComponentesVarios/Utilidades/UtilityFunctions";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
@@ -31,7 +32,34 @@ const CrearPublicacion = () => {
             categoria: values.categoria
           }
 
-          await Api.post()
+          await Api.post(
+            Endpoints.publicaciones,
+            publicationData,
+            ConfigWithAuth
+          ).then( ( response ) => {
+            if( response.status === 201 ) {
+              const multimediaData = {
+                clave_publicacion: response.data.clave_publicacion,
+                multimedia: ConvertToBase64( values.archivo )
+              }
+
+              Api.post(
+                Endpoints.multimedia,
+                multimediaData,
+                ConfigWithAuth
+              ).then( ( response ) => {
+                if( response.status === 201 ) {
+
+                }
+              } ).catch( ( e ) => {
+                console.log( e.response.status );
+                console.log( e.response.data );
+              } );
+            }
+          } ).catch( ( e ) => {
+            console.log( e.response.status );
+            console.log( e.response.data );
+          } );
       } }
     >
       { formik => (
