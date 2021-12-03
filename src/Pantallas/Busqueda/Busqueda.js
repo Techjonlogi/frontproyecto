@@ -1,6 +1,6 @@
 const Busqueda = () => {
     return (
-
+        <></>
     );
 };
 
