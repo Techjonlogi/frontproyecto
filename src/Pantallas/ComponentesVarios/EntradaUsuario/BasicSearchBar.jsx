@@ -14,7 +14,7 @@ const SearchBar = ( props ) => {
                     { ...field }
                 >
                 </Form.Control>
-                <BasicButton buttonId="BotonBuscar" content="Buscar" />
+                <BasicButton buttonId="BotonBuscar" content="Buscar" buttonType="submit"/>
             </InputGroup>
         </Form.Group>
     );

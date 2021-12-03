@@ -17,13 +17,14 @@ const NavBar = () => {
       >
         { formik => (
           <>
+            { console.log( formik.values ) }
             <Navbar className="NavigationBar">
             <Row id="row">
               <Col className="BrandColumn" >
                 <Navbar.Brand className="SiteLogoLink" href="/Home">New Talent</Navbar.Brand>
               </Col>
               <Col className="SearchColumn" xs={ 5 }>
-                <Form>
+                <Form onSubmit={ formik.handleSubmit }>
                   <BasicSearchBar name="search_query" />
                 </Form>
               </Col>
