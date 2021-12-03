@@ -16,7 +16,9 @@ const PublicationinputSchema = Yup.object( {
         .required( 'Por favor seleccione una categoria' )
         .min( 0 )
         .max( 20 )
-        .integer()
+        .integer(),
+    archivo: Yup.mixed()
+        .required( 'Por favor selecciona un archivo' )
 } );
 
 export default PublicationinputSchema;

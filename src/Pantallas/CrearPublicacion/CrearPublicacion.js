@@ -18,12 +18,13 @@ const CrearPublicacion = () => {
         nombre_publicacion: '',
         descripcion_publicacion: '',
         categoria: '',
-        archivo: null
+        archivo: ''
       } }
       validationSchema= { PublicationinputSchema }
     >
       { formik => (
         <>
+          { console.log( formik.values ) }
           <NavBar />
           <Container className="CreatePublicationContent" fluid>
             <Row className="BodyRow">
@@ -32,9 +33,9 @@ const CrearPublicacion = () => {
                 <Container id="FormContainer">
                   <Form id="CreatePublicationForm" onSubmit={ formik.handleSubmit }>
                     <Form.Label id="PublicationContentLabel">Crear Publicación</Form.Label>
-                    <BasicFormFileInput name="archivo"/>
-                    <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion"/>
-                    <BasicFormTextArea labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" />
+                    <BasicFormFileInput name="archivo" valueFunc={ formik.setFieldValue }/>
+                    <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion" placeholder="Introduce el nombre de la publicación"/>
+                    <BasicFormTextArea labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" placeholder="Introduce la descripción de la publicación"/>
                     <BasicFormSelect labelId="etiquetaCategoria" label="Categoria de Publicación" selectId="selectCategoria" name="categoria" options={ [ 'Digital', 'Pintura' ] }/>
                     <BasicButton content="Crear Publicación"/>
                   </Form>
