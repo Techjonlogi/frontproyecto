@@ -2,7 +2,8 @@ const Endpoints = {
     usuarios: "/usuarios",
     login: "/login",
     publicacionesUsuario: "/publicacionesusuario",
-    multimedia: "/multimedia"
+    multimedia: "/multimedia",
+    actualizarMultimedia: "/publicaciones/publicacionespecifica" 
 }
 
 export default Endpoints;
