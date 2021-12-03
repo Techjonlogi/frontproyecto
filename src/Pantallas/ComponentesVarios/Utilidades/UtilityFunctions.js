@@ -3,7 +3,9 @@ export function ConvertToBase64( file ) {
     if( file ) {
         reader.readAsDataURL( file );
         reader.onload = () => {
-            return reader.result;
+            var base = reader.result;
+            console.log( base );
+            return base;
         };
         reader.onerror = ( error ) => {
             console.log( "error: ", error );

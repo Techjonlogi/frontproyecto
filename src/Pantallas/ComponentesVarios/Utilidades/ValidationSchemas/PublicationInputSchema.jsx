@@ -10,7 +10,7 @@ const PublicationinputSchema = Yup.object( {
     descripcion_publicacion: Yup.string()
         .min( 3, 'Debe tener por lo menos 3 caracteres.' )
         .max( 200, 'Debe tener 200 caracteres o menos.')
-        .matches( Expresiones.nombreExpresion, 'Nombres inválidos' )
+        .matches( Expresiones.descripcionExpresion, 'Descripción inválida' )
         .required( 'Por favor introduzca una descripción' ),
     categoria: Yup.number( 'Por favor seleccione una categoria' )
         .required( 'Por favor seleccione una categoria' )

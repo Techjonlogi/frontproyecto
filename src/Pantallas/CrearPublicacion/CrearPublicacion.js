@@ -5,7 +5,7 @@ import { Formik } from "formik";
 import { Container, Form, Figure, Col, Row } from "react-bootstrap";
 import { ConvertToBase64 } from "../ComponentesVarios/Utilidades/UtilityFunctions";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
-import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
+import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigWithAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import PublicationinputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/PublicationInputSchema";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
@@ -28,33 +28,19 @@ const CrearPublicacion = () => {
       onSubmit={ async ( values ) => {
           const publicationData = {
             nombre_publicacion: values.nombre_publicacion,
-            descipcion: values.descripcion_publicacion,
-            categoria: values.categoria
+            descripcion: values.descripcion_publicacion,
+            categoria: values.categoria,
+            multimedia: ConvertToBase64( values.archivo )
           }
 
+          console.log( ConvertToBase64( values.archivo ) );
           await Api.post(
-            Endpoints.publicaciones,
+            Endpoints.publicacionesUsuario + "/" + localStorage.getItem( "KeyID" ),
             publicationData,
             ConfigWithAuth
           ).then( ( response ) => {
             if( response.status === 201 ) {
-              const multimediaData = {
-                clave_publicacion: response.data.clave_publicacion,
-                multimedia: ConvertToBase64( values.archivo )
-              }
-
-              Api.post(
-                Endpoints.multimedia,
-                multimediaData,
-                ConfigWithAuth
-              ).then( ( response ) => {
-                if( response.status === 201 ) {
-
-                }
-              } ).catch( ( e ) => {
-                console.log( e.response.status );
-                console.log( e.response.data );
-              } );
+              console.log( response.data )
             }
           } ).catch( ( e ) => {
             console.log( e.response.status );

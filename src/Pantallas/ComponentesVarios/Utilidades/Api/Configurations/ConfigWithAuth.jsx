@@ -1,7 +1,7 @@
 const ConfigWithAuth = {
     headers: {
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem( 'Token' )
+        Authorization: ( 'Bearer ' + localStorage.getItem( 'Token' ) ),
     }
 };
 

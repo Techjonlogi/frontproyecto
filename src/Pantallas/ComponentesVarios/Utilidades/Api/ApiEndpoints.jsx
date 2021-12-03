@@ -1,7 +1,7 @@
 const Endpoints = {
     usuarios: "/usuarios",
     login: "/login",
-    publicaciones: "/publicaciones",
+    publicacionesUsuario: "/publicacionesusuario",
     multimedia: "/multimedia"
 }
 
