@@ -3,6 +3,9 @@ import "./CrearPublicacion.css";
 
 import { Formik } from "formik";
 import { Container, Form, Figure, Col, Row } from "react-bootstrap";
+import Api from "../ComponentesVarios/Utilidades/Api/Api";
+import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
+import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import PublicationinputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/PublicationInputSchema";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import BasicFormFileInput from "../ComponentesVarios/EntradaUsuario/BasicFormFileInput";
@@ -21,6 +24,15 @@ const CrearPublicacion = () => {
         archivo: ''
       } }
       validationSchema= { PublicationinputSchema }
+      onSubmit={ async ( values ) => {
+          const publicationData = {
+            nombre_publicacion: values.nombre_publicacion,
+            descipcion: values.descripcion_publicacion,
+            categoria: values.categoria
+          }
+
+          await Api.post()
+      } }
     >
       { formik => (
         <>
@@ -37,7 +49,7 @@ const CrearPublicacion = () => {
                     <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion" placeholder="Introduce el nombre de la publicación"/>
                     <BasicFormTextArea labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" placeholder="Introduce la descripción de la publicación"/>
                     <BasicFormSelect labelId="etiquetaCategoria" label="Categoria de Publicación" selectId="selectCategoria" name="categoria" options={ [ 'Digital', 'Pintura' ] }/>
-                    <BasicButton content="Crear Publicación"/>
+                    <BasicButton content="Crear Publicación" buttonType="submit"/>
                   </Form>
                 </Container>
               </Col>
