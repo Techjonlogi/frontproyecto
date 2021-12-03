@@ -2,7 +2,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './NavBar.css';
 
 import { Formik } from "formik";
-import { Navbar, Row, Col } from "react-bootstrap";
+import { Navbar, Form, Row, Col } from "react-bootstrap";
+import SearchInputSchema from "../Utilidades/ValidationSchemas/SearchInputSchema";
 import BasicSearchBar from "../EntradaUsuario/BasicSearchBar";
 import DynamicNavbarLinks from "./DynamicNavBarLinks";
 
@@ -12,6 +13,7 @@ const NavBar = () => {
         initialValues= { {
           search_query: ''
         }  }
+        validationSchema= { SearchInputSchema }
       >
         { formik => (
           <>
@@ -21,7 +23,9 @@ const NavBar = () => {
                 <Navbar.Brand className="SiteLogoLink" href="/Home">New Talent</Navbar.Brand>
               </Col>
               <Col className="SearchColumn" xs={ 5 }>
-                <BasicSearchBar />
+                <Form>
+                  <BasicSearchBar name="search_query" />
+                </Form>
               </Col>
               <Col className="LinkColumn" >
                 <DynamicNavbarLinks token={ localStorage.getItem( "Token" ) }/>
