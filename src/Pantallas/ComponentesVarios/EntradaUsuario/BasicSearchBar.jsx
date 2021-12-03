@@ -1,12 +1,19 @@
 import { Form, InputGroup } from "react-bootstrap";
+import { useField } from "formik";
 import BasicButton from "../Botones/BasicButton";
 import PropTypes from "prop-types";
 
 const SearchBar = ( props ) => {
+    const [ field, meta ] = useField( props );
     return (
         <Form.Group className="BasicSearchInputGroup">
             <InputGroup>
-                <Form.Control className="FormControlInput" id="SearchBar" type="text" placeholder={ props.placeholder }></Form.Control>
+                <Form.Control 
+                    className={ `FormControlInput ${ meta.touched && meta.error && 'is-invalid' }` } 
+                    id="SearchBar" type="text" placeholder={ props.placeholder }
+                    { ...field }
+                >
+                </Form.Control>
                 <BasicButton buttonId="BotonBuscar" content="Buscar" />
             </InputGroup>
         </Form.Group>
