@@ -4,7 +4,7 @@ import './UserRegistry.css';
 import { Formik } from "formik";
 import { Container, Form, Row, Col } from "react-bootstrap";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
-import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/ApiConfigurations";
+import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import RegisterInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/RegisterInputSchema";
 import ImagenFondo from "../../Pantallas/Login/Imagenes/LoginImagen.jpeg";

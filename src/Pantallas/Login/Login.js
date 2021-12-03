@@ -3,7 +3,7 @@ import "./Login.css";
 import { Formik } from "formik";
 import { Container, Form, Row, Col } from "react-bootstrap";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
-import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/ApiConfigurations";
+import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import LoginInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/LoginInputSchema";
 import imagenUsuario from "../../Imagenes/UsuarioImagen.svg";
