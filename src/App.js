@@ -8,6 +8,7 @@ import Error404 from './Pantallas/PaginaError/Error404';
 import CrearPublicacion from './Pantallas/CrearPublicacion/CrearPublicacion';
 import PerfilUsuario from './Pantallas/PerfilUsuario/PerfilUsuario';
 import UserRegistry from './Pantallas/UserRegistry/UserRegistry';
+import Busqueda from './Pantallas/Busqueda/Busqueda';
 import verComentariosAdmin from './Pantallas/verComentarioAdmin/verListacomentarios';
 
 
@@ -22,6 +23,7 @@ function App() {
      <Route exact path="Publicar" element={ <CrearPublicacion /> }></Route>
      <Route exact path="Perfil" element={ <PerfilUsuario /> }></Route>
      <Route exact path="/" element={ <Home/> }></Route>
+     <Route exact path=":seach_query">{ <Busqueda/> }</Route>
      <Route path="*" element={ <Error404/> }></Route>
    </Routes>
    </BrowserRouter>
