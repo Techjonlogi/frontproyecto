@@ -14,6 +14,9 @@ const NavBar = () => {
           search_query: ''
         }  }
         validationSchema= { SearchInputSchema }
+        onSubmit= { ( values ) => {
+          window.location.assign( `http://localhost:3000/Busqueda/${ values.search_query }` );
+        } }
       >
         { formik => (
           <>
