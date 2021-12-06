@@ -23,7 +23,7 @@ function App() {
      <Route exact path="Publicar" element={ <CrearPublicacion /> }></Route>
      <Route exact path="Perfil" element={ <PerfilUsuario /> }></Route>
      <Route exact path="/" element={ <Home/> }></Route>
-     <Route exact path=":seach_query">{ <Busqueda/> }</Route>
+     <Route exact path="Busqueda/:seach_query">{ <Busqueda/> }</Route>
      <Route path="*" element={ <Error404/> }></Route>
    </Routes>
    </BrowserRouter>
