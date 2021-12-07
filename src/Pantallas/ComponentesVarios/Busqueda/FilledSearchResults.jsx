@@ -1,4 +1,5 @@
 import { Container, Form, Row, Col } from "react-bootstrap";
+import PropTypes from "prop-types";
 import NavBar from "../BarraNavegacion/NavBar";
 
 const FilledSearchResults = ( props ) => {
@@ -19,5 +20,13 @@ const FilledSearchResults = ( props ) => {
         </>
     );
 };
+
+FilledSearchResults.defaultProps = {
+    publicaciones: []
+}
+
+FilledSearchResults.propTypes = {
+    publicaciones: PropTypes.array
+}
 
 export default FilledSearchResults;
