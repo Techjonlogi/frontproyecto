@@ -18,7 +18,7 @@ const Busqueda = () => {
     useEffect( () => {
         async function sendPublicationSearchRequest() {
             await Api.get(
-                Endpoints.search + "/" +  search_query,
+                Endpoints.searchPublicaciones + "/" +  search_query,
                 ConfigNoAuth
             ).then( ( response ) => {
                 if( response.status === 200 ) {
@@ -30,7 +30,24 @@ const Busqueda = () => {
                 console.log( e.response.data );
             } );
         }
+
+        async function sendUsuarioSearchRequest() {
+            await Api.get(
+                Endpoints.searchUsuarios + "/" +  search_query,
+                ConfigNoAuth
+            ).then( ( response ) => {
+                if( response.status === 200 ) {
+                    setUsuarios( response.data );
+                    setLoaded( true );
+                }
+            } ).catch( ( e ) => {
+                console.log( e.response.status );
+                console.log( e.response.data );
+            } );
+        }
+
         sendPublicationSearchRequest();
+        sendUsuarioSearchRequest();
     } );
 
     if( !loadedItems ) {
@@ -42,7 +59,7 @@ const Busqueda = () => {
     } else {
         return (
             <>
-                <FilledSearchResults publicaciones={ publicaciones } />
+                <FilledSearchResults publicaciones={ publicaciones } usuarios={ usuarios }/>
             </>
         );
     }
