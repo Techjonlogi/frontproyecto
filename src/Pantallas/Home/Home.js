@@ -22,7 +22,6 @@ let publicacionesConMultimedia =[]
       Api.get(Endpoints.multimedia +"/"+ publicacion.clave_publicacion +Endpoints.obtenerMultimediaEspecifica).then((res)=>{
         publicacion.multimedia = res.data.multimedia;
         publicacionesConMultimedia.push(publicacion);
-        console.log(publicacionesConMultimedia);
         
       }).catch((e) =>
       alert("Ocurrio un error al cargar las imagenes")
