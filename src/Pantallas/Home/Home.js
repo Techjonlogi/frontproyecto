@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState,useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import './Home.css';
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
@@ -6,12 +6,14 @@ import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import { Container } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import CardPublicacion from "../ComponentesVarios/CardParaPublicacion/CardPublicacion";
+import { render } from "@testing-library/react";
 
 const Home = () => { 
 let publicaciones =[]
-let publicacionesConMultimedia =[]
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  React.useEffect(async()=>{
+let publicacionesConMultimedia = []
+let [publicacionesEstado, setPublicaciones] = useState([]);
+  
+ const LlenarArreglos =async()=>{
     await Api.get(Endpoints.publicaciones).then( (res) =>{
       publicaciones = res.data;
     }).catch(( e ) =>
@@ -27,12 +29,12 @@ let publicacionesConMultimedia =[]
       alert("Ocurrio un error al cargar las imagenes")
       )
     ))
-
-
-  }
-  );
+    setPublicaciones(publicacionesConMultimedia);
+  };
     
-
+useEffect(()=>{
+  LlenarArreglos();
+},[])
   return (
       
   
@@ -40,7 +42,7 @@ let publicacionesConMultimedia =[]
       <NavBar />
       
       <Container>
-        {publicacionesConMultimedia.map(publicacion =>(
+        {publicacionesEstado.map(publicacion =>(
           <div item xs={12} sm={6} md ={4} lg={3}>
               <CardPublicacion key={publicacion.clave_publicacion} publication = {publicacion}/>
           </div>
