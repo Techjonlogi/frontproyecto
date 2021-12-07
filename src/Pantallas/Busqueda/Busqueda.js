@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
-import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
+import EmptySearchResults from "../ComponentesVarios/Busqueda/EmptySearchResults";
 
 const Busqueda = () => {
     const [ items, setItems ] = useState( [] ); 
@@ -26,20 +25,19 @@ const Busqueda = () => {
         } );
     } )
 
-    return (
-        <>
-            <NavBar />
-            <Container className="SearchPageContent" fluid>
-                <Row>
-                    <Col id="EmptyLeftColumn" sm={ 3 }></Col>
-                    <Col id="SearchResultsColumn" sm={ 6 }>
-                        <h1>Pagina de busqueda</h1>
-                    </Col>
-                    <Col id="EmptyRightColumn" sm={ 3 }></Col>
-                </Row>
-            </Container>
-        </>
-    );
+    if( !loadedItems ) {
+        return (
+            <>
+                <EmptySearchResults />
+            </>
+        );
+    } else {
+        return (
+            <>
+                <h1>TESTING!!!!!!!</h1>
+            </>
+        );
+    }
 };
 
 export default Busqueda;
