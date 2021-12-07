@@ -5,7 +5,7 @@ import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import { Container } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
-
+import CardPublicacion from "../ComponentesVarios/CardParaPublicacion/CardPublicacion";
 
 const Home = () => { 
 let publicaciones =[]
@@ -39,8 +39,15 @@ let publicacionesConMultimedia =[]
     <>
       <NavBar />
       
-      <verComentarioAdmin/>
-      <Container className="HomeContent" >
+      <Container>
+        {publicacionesConMultimedia.map(publicacion =>(
+          <div item xs={12} sm={6} md ={4} lg={3}>
+              <CardPublicacion key={publicacion.clave_publicacion} publication = {publicacion}/>
+          </div>
+
+        ))
+
+        }
       </Container>
       
     </>
