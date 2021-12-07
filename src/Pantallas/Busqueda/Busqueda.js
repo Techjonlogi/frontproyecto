@@ -48,7 +48,7 @@ const Busqueda = () => {
 
         sendPublicationSearchRequest();
         sendUsuarioSearchRequest();
-    } );
+    }, [] );
 
     if( !loadedItems ) {
         return (

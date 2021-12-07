@@ -1,4 +1,4 @@
-import { Container, ListGroup } from "react-bootstrap";
+import { Container, ListGroup, Form } from "react-bootstrap";
 import PropTypes from "prop-types";
 
 const SearchResultsPublicaciones = ( props ) => {

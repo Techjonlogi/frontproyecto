@@ -1,6 +1,7 @@
 import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
 import PropTypes from "prop-types";
 import NavBar from "../BarraNavegacion/NavBar";
+import SearchResultsPublicaciones from "./SearchResultsPublicaciones";
 
 const FilledSearchResults = ( props ) => {
     return (
@@ -14,24 +15,7 @@ const FilledSearchResults = ( props ) => {
                             <Container className="SearchResultsTitle">
                                 <Form.Label>Resultados de Búsqueda</Form.Label>
                             </Container>
-                            <Container className="SearchResultsPublicaciones">
-                                <Form.Label>Publicaciones:</Form.Label>
-                                <ListGroup id="PublicacionesList" as="ul">
-                                    { props.publicaciones.map( ( publicacion, index ) => (
-                                        <ListGroup.Item action href="http://localhost:3000/Home" as="li">
-                                            <Container className="IconoPublicacion"></Container>
-                                            <Container className="DetallesPublicacion">
-                                                <Container className="TituloPublicacion">
-                                                    <h4>{ publicacion.nombre_publicacion }</h4>
-                                                </Container>
-                                                <Container className="DetallesPublicacion">
-                                                    { publicacion.descripcion }
-                                                </Container>
-                                            </Container>
-                                        </ListGroup.Item>
-                                    ) ) }
-                                </ListGroup>
-                            </Container>
+                            <SearchResultsPublicaciones publicaciones={ props.publicaciones } />
                             <Container className="SearchResultsUsuario">
                                 <Form.Label>Usuarios:</Form.Label>
                                 <ListGroup id="UsuariosList">
