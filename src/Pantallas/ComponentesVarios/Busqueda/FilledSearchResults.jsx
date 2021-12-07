@@ -2,6 +2,7 @@ import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
 import PropTypes from "prop-types";
 import NavBar from "../BarraNavegacion/NavBar";
 import SearchResultsPublicaciones from "./SearchResultsPublicaciones";
+import SearchResultsUsuarios from "./SearchResultsUsuarios";
 
 const FilledSearchResults = ( props ) => {
     return (
@@ -16,12 +17,7 @@ const FilledSearchResults = ( props ) => {
                                 <Form.Label>Resultados de Búsqueda</Form.Label>
                             </Container>
                             <SearchResultsPublicaciones publicaciones={ props.publicaciones } />
-                            <Container className="SearchResultsUsuario">
-                                <Form.Label>Usuarios:</Form.Label>
-                                <ListGroup id="UsuariosList">
-                                    
-                                </ListGroup>
-                            </Container>
+                            <SearchResultsUsuarios usuarios={ props.usuarios } />
                         </Container>
                     </Col>
                     <Col id="EmptyRightColumn" sm={ 3 }></Col>
