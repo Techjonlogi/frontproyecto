@@ -1,7 +1,31 @@
+.SearchPageContent {
+    background-color: #2B293A;
+    align-items: center;
+    height: 95vh;
+    width: auto;
+}
+
+.SearchResults {
+    background-color: #2b2936;
+    align-items: center;
+    padding: 3%;
+}
+
 #EmptyLeftColumn {
     background-color: red;
 }
 
 #EmptyRightColumn {
     background-color: red;
+}
+
+#SearchResultsColumn {
+    background-color: #242230;
+    height: fit-content;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #18161f;
+    border-width: 10px;
+    padding: 2%;
+    margin-top: 20px;
 }
