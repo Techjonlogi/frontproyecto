@@ -7,20 +7,22 @@ import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import EmptySearchResults from "../ComponentesVarios/Busqueda/EmptySearchResults";
+import FilledSearchResults from "../ComponentesVarios/Busqueda/FilledSearchResults";
 
 const Busqueda = () => {
-    const [ items, setItems ] = useState( [] ); 
+    const [ publicaciones, setPublicaciones ] = useState( [] ); 
+    const [ usuarios, setUsuarios ] = useState( [] );
     const [ loadedItems, setLoaded ] = useState( false );
     let { search_query } = useParams();
 
     useEffect( () => {
-        async function sendSearchRequest() {
+        async function sendPublicationSearchRequest() {
             await Api.get(
                 Endpoints.search + "/" +  search_query,
                 ConfigNoAuth
             ).then( ( response ) => {
                 if( response.status === 200 ) {
-                    setItems( response.data );
+                    setPublicaciones( response.data );
                     setLoaded( true );
                 }
             } ).catch( ( e ) => {
@@ -28,7 +30,7 @@ const Busqueda = () => {
                 console.log( e.response.data );
             } );
         }
-        sendSearchRequest();
+        sendPublicationSearchRequest();
     } );
 
     if( !loadedItems ) {
@@ -40,7 +42,7 @@ const Busqueda = () => {
     } else {
         return (
             <>
-                <h1>TESTING!!!!!!!</h1>
+                <FilledSearchResults publicaciones={ publicaciones } />
             </>
         );
     }
