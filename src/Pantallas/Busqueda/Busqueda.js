@@ -11,19 +11,22 @@ const Busqueda = () => {
     let { search_query } = useParams();
 
     useEffect( () => {
-        await Api.get(
-            Endpoints.search + "/" +  search_query,
-            ConfigNoAuth
-        ).then( ( response ) => {
-            if( response.status === 200 ) {
-                setItems( response.data );
-                setLoaded( true );
-            }
-        } ).catch( ( e ) => {
-            console.log( e.response.status );
-            console.log( e.response.data );
-        } );
-    } )
+        async function sendSearchRequest() {
+            await Api.get(
+                Endpoints.search + "/" +  search_query,
+                ConfigNoAuth
+            ).then( ( response ) => {
+                if( response.status === 200 ) {
+                    setItems( response.data );
+                    setLoaded( true );
+                }
+            } ).catch( ( e ) => {
+                console.log( e.response.status );
+                console.log( e.response.data );
+            } );
+        }
+        sendSearchRequest();
+    } );
 
     if( !loadedItems ) {
         return (

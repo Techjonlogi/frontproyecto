@@ -1,4 +1,5 @@
 import { Container, Form, Row, Col } from "react-bootstrap";
+import NavBar from "../BarraNavegacion/NavBar";
 
 const EmptySearchResults = () => {
     return (
