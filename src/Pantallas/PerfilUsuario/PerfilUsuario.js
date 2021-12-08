@@ -12,6 +12,7 @@ import InformacionUsuario from '../ComponentesVarios/PerfilUsuario/InformacionUs
 
 const PerfilUsuario = () => {
     const [ usuario, setUsuario ] = useState( [] );
+    const [ publicaciones, setPublicaciones ] = useState( [] );
     let { id_usuario } = useParams();
 
     useEffect( () => {
@@ -29,7 +30,22 @@ const PerfilUsuario = () => {
             } );
         }
 
+        async function sendUserPublicationRequest() {
+            await Api.get(
+                Endpoints.multimedia + "/" + id_usuario,
+                ConfigNoAuth
+            ).then( ( response ) => {
+                if( response.status === 200 ) {
+                    setPublicaciones( response.data );
+                }
+            } ).catch( ( e ) => {
+                console.log( e.response.status );
+                console.log( e.response.data );
+            } );
+        }
+
         sendUserInformationRequest();
+        sendUserPublicationRequest();
     }, [ id_usuario ] );
 
     return (
