@@ -9,6 +9,7 @@ import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/Con
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import InformacionUsuario from '../ComponentesVarios/PerfilUsuario/InformacionUsuario';
+import PublicacionesUsuario from "../ComponentesVarios/PerfilUsuario/PublicacionesUsuario";
 
 const PerfilUsuario = () => {
     const [ usuario, setUsuario ] = useState( [] );
@@ -58,7 +59,9 @@ const PerfilUsuario = () => {
                     <Col id="UserInfoColumn" sm={ 3 }>
                         <InformacionUsuario datos={ usuario }/>
                     </Col>
-                    <Col id="UserPublicationsColumn" sm={ 5 }></Col>
+                    <Col id="UserPublicationsColumn" sm={ 5 }>
+                        <PublicacionesUsuario publicaciones={ publicaciones }/>
+                    </Col>
                     <Col id="EmptyRightColumn" sm={ 2 }></Col>
                 </Row>
             </Container>
