@@ -6,8 +6,6 @@ import { Card,Button } from "react-bootstrap";
 
 const CardPublicacion =({publication: {clave_publicacion,nombre_publicacion,descripcion,calificacion_general,categoria, multimedia,fecha_publicacion  }})=>{
 
-
-
     return (
       <>
         <Card style={{ width: "18rem" }}>
