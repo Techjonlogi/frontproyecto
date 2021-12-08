@@ -19,7 +19,7 @@ const InformacionUsuario = ( props ) => {
                     <dt>Correo:</dt>
                     <dd>{ props.datos.correo_electronico }</dd>
                     <dt>Se unio en:</dt>
-                    <dd>{ props.datos.unio_en }</dd>
+                    <dd>{ props.datos.fecha_union }</dd>
                 </dl>
             </Container>
         </Container>
