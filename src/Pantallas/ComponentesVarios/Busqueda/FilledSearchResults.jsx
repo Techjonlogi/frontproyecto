@@ -1,4 +1,4 @@
-import { Container, Form, Row, Col, ListGroup } from "react-bootstrap";
+import { Container, Form, Row, Col } from "react-bootstrap";
 import PropTypes from "prop-types";
 import NavBar from "../BarraNavegacion/NavBar";
 import SearchResultsPublicaciones from "./SearchResultsPublicaciones";
@@ -14,7 +14,7 @@ const FilledSearchResults = ( props ) => {
                     <Col id="SearchResultsColumn" sm={ 6 }>
                         <Container className="SearchResults">
                             <Container className="SearchResultsTitle">
-                                <Form.Label>Resultados de Búsqueda</Form.Label>
+                                <Form.Label>RESULTADOS DE BÚSQUEDA</Form.Label>
                             </Container>
                             <SearchResultsPublicaciones publicaciones={ props.publicaciones } />
                             <SearchResultsUsuarios usuarios={ props.usuarios } />

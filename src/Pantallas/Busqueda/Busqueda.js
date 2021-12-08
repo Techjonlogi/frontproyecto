@@ -22,6 +22,7 @@ const Busqueda = () => {
                 ConfigNoAuth
             ).then( ( response ) => {
                 if( response.status === 200 ) {
+                    console.log( response.data );
                     setPublicaciones( response.data );
                     setLoaded( true );
                 }
@@ -48,7 +49,7 @@ const Busqueda = () => {
 
         sendPublicationSearchRequest();
         sendUsuarioSearchRequest();
-    }, [] );
+    }, [ search_query ] );
 
     if( !loadedItems ) {
         return (

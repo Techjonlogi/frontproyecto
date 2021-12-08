@@ -8,11 +8,11 @@ const SearchResultsUsuarios = ( props ) => {
                 <Form.Label>Usuarios:</Form.Label>
                 <ListGroup id="UsuariosList" as="ul">
                     { props.usuarios.map( ( usuario, index ) => (
-                        <ListGroup.Item action href="http://localhost:3000/Home" as="li">
+                        <ListGroup.Item className="ListItem" action href="http://localhost:3000/Home" as="li">
                             <Container className="FotoPerfilUsuario"></Container>
                             <Container className="DetallesUsuario">
                                 <Container className="NombreUsuario">
-                                    <h4>{ usuario.nombre_usuario }</h4>
+                                    <h5>{ usuario.nombre_usuario }</h5>
                                 </Container>
                             </Container>
                         </ListGroup.Item>
