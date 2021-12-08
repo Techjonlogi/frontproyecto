@@ -5,7 +5,9 @@ const Endpoints = {
     multimedia: "/multimedia",
     actualizarMultimedia: "/publicaciones/publicacionespecifica",
     publicaciones: "/publicaciones",
-    obtenerMultimediaEspecifica : "/obtenermultimedia" 
+    obtenerMultimediaEspecifica : "/obtenermultimedia",
+    searchPublicaciones: "/publicaciones/search",
+    searchUsuarios: "/usuarios/search"
 }
 
 export default Endpoints;

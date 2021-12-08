@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./CrearPublicacion.css";
 
 import { Formik } from "formik";
-import { Container, Form, Figure, Col, Row } from "react-bootstrap";
+import { Container, Form, Col, Row } from "react-bootstrap";
 import { ConvertToBase64 } from "../ComponentesVarios/Utilidades/UtilityFunctions";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigWithAuth";
@@ -50,7 +50,6 @@ const CrearPublicacion = () => {
     >
       { formik => (
         <>
-          { console.log( formik.values ) }
           <NavBar />
           <Container className="CreatePublicationContent" fluid>
             <Row className="BodyRow">

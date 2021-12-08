@@ -1,25 +1,44 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './NavBar.css';
 
-import { Navbar, Row, Col } from "react-bootstrap";
+import { Formik } from "formik";
+import { Navbar, Form, Row, Col } from "react-bootstrap";
+import SearchInputSchema from "../Utilidades/ValidationSchemas/SearchInputSchema";
 import BasicSearchBar from "../EntradaUsuario/BasicSearchBar";
 import DynamicNavbarLinks from "./DynamicNavBarLinks";
 
-const NavBar = ( idCategoria ) => {
+const NavBar = () => {
     return (
-      <Navbar className="NavigationBar">
-        <Row id="row">
-          <Col className="BrandColumn" >
-            <Navbar.Brand className="SiteLogoLink" href="/Home">New Talent</Navbar.Brand>
-          </Col>
-          <Col className="SearchColumn" xs={ 5 }>
-            <BasicSearchBar />
-          </Col>
-          <Col className="LinkColumn" >
-            <DynamicNavbarLinks token={ localStorage.getItem( "Token" ) }/>
-          </Col>
-        </Row>
-      </Navbar>
+      <Formik
+        initialValues= { {
+          search_query: ''
+        }  }
+        validationSchema= { SearchInputSchema }
+        onSubmit= { ( values ) => {
+          window.location.assign( `http://localhost:3000/Busqueda/${ values.search_query }` );
+        } }
+      >
+        { formik => (
+          <>
+            { console.log( formik.values ) }
+            <Navbar className="NavigationBar">
+            <Row id="row">
+              <Col className="BrandColumn" >
+                <Navbar.Brand className="SiteLogoLink" href="/Home">New Talent</Navbar.Brand>
+              </Col>
+              <Col className="SearchColumn" xs={ 5 }>
+                <Form onSubmit={ formik.handleSubmit }>
+                  <BasicSearchBar name="search_query" />
+                </Form>
+              </Col>
+              <Col className="LinkColumn" >
+                <DynamicNavbarLinks token={ localStorage.getItem( "Token" ) }/>
+              </Col>
+            </Row>
+            </Navbar>
+          </>
+        ) }
+      </Formik>
     );
 };
 

@@ -56,3 +56,11 @@
     font-weight: bold;
     color: white !important;
 }
+
+#SearchBar:not( active ) {
+    color: white;
+}
+
+#SearchBar:focus {
+    color: white;
+}
