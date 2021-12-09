@@ -40,10 +40,11 @@ const UserRegistry = () => {
                     data,
                     ConfigNoAuth
                 ).then( ( response ) => {
-                    console.log( response.data );
+                    if( response.status === 201 ) {
+                        window.location.replace( "http://localhost:3000/Login" );
+                    }
                 } ).catch( ( e ) => {
-                    console.log( e.response.status );
-                    console.log( e.response.data );
+                    alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
                 } );
             } }
         >
