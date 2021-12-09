@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './Busqueda.css';
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";

@@ -10,7 +10,7 @@ const SearchResultsUsuarios = ( props ) => {
                 <ListGroup id="UsuariosList" as="ul">
                     { props.usuarios.map( ( usuario, index ) => (
                         <ListGroup.Item key={ index } className="ListItem" as="li">
-                            <Nav.Link className="ListLink" href="/Home">
+                            <Nav.Link className="ListLink" href={ `/Perfil/${ usuario.clave_usuario }` }>
                                 <Row className="ListItemRow">
                                     <Col className="IconColumn" sm={ 2 }>
                                         <Container className="FotoPerfilUsuario">
