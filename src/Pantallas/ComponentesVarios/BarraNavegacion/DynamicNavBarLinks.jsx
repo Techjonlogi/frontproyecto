@@ -15,7 +15,7 @@ const DynamicNavBarLinks = ( props ) => {
         return (
             <>
                 <Nav className="LinkRow">
-                    <Nav.Link className="NavigationLink" href="/Perfil">Perfil</Nav.Link>
+                    <Nav.Link className="NavigationLink" href={ `/Perfil/${ localStorage.getItem( "KeyID" ) }` }>Perfil</Nav.Link>
                     <Nav.Link className="NavigationLink" href="/Home">Mensajes</Nav.Link>
                     <Nav.Link className="NavigationLink" href="/Publicar">Publicar</Nav.Link>
                 </Nav>
