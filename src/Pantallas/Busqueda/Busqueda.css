@@ -43,7 +43,10 @@
 .ListItemRow {
     display: flex;
     align-items: center;
+}
 
+.IconoPublicacion {
+    background-color: #4d4b58;
 }
 
 .ItemImage {
