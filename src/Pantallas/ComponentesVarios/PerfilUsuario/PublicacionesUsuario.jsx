@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const PublicacionesUsuario = ( props ) => {
     return (
         <>
-            <Container className="PublicacionesUsuario">
+            <Container id="PublicacionesUsuario">
                 <Container className="PublicacionesTitle">
                     <Form.Label>Publicaciones del Usuario:</Form.Label>
                 </Container>

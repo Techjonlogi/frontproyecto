@@ -82,3 +82,10 @@ dd {
 #EditarButton {
     width: 100%;
 }
+
+#PublicacionesUsuario {
+    width: 700px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
