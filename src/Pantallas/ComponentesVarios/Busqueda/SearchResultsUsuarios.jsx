@@ -11,10 +11,10 @@ const SearchResultsUsuarios = ( props ) => {
                         <ListGroup.Item className="ListItem" as="li">
                             <Nav.Link className="ListLink" href="/Home">
                                 <Row className="ListItemRow">
-                                    <Col className="IconColumn" sm={ 1 }>
+                                    <Col className="IconColumn" sm={ 2 }>
                                         <Container className="FotoPerfilUsuario"></Container>
                                     </Col>
-                                    <Col className="DetailsColumn" sm={ 11 }>
+                                    <Col className="DetailsColumn" sm={ 10 }>
                                         <Container className="DetallesUsuario">
                                             <Container className="NombreUsuario">
                                                 <h5>{ usuario.nombre_usuario }</h5>
