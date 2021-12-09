@@ -44,7 +44,11 @@ const UserRegistry = () => {
                         window.location.replace( "http://localhost:3000/Login" );
                     }
                 } ).catch( ( e ) => {
-                    alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
+                    if( e.response.status === 429 ) {
+                        alert( "Ya no puedes registrar otro usuario hoy." );
+                    } else {
+                        alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
+                    }
                 } );
             } }
         >
