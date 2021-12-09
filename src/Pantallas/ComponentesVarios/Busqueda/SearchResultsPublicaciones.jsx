@@ -9,7 +9,7 @@ const SearchResultsPublicaciones = ( props ) => {
                 <ListGroup id="PublicacionesList" as="ul">
                     { props.publicaciones.map( ( publicacion, index ) => (
                         <ListGroup.Item className="ListItem" as="li">
-                            <Nav.Link className="ListLink" href="/Home">
+                            <Nav.Link className="ListLink" href={ `/PublicacionSeleccionada/${ publicacion.clave_publicacion }` }>
                                 <Row className="ListItemRow">
                                     <Col className="IconColumn" sm={ 2 }>
                                         <Container className="IconoPublicacion">
