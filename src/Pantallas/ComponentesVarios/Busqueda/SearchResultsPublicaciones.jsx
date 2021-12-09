@@ -8,7 +8,7 @@ const SearchResultsPublicaciones = ( props ) => {
                 <Form.Label>Publicaciones:</Form.Label>
                 <ListGroup id="PublicacionesList" as="ul">
                     { props.publicaciones.map( ( publicacion, index ) => (
-                        <ListGroup.Item className="ListItem" as="li">
+                        <ListGroup.Item key={ index } className="ListItem" as="li">
                             <Nav.Link className="ListLink" href={ `/PublicacionSeleccionada/${ publicacion.clave_publicacion }` }>
                                 <Row className="ListItemRow">
                                     <Col className="IconColumn" sm={ 2 }>
