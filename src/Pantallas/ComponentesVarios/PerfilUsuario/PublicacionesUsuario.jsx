@@ -5,12 +5,12 @@ const PublicacionesUsuario = ( props ) => {
     return (
         <>
             <Container id="PublicacionesUsuario">
-                <Container className="PublicacionesTitle">
-                    <Form.Label>Publicaciones del Usuario:</Form.Label>
+                <Container id="PublicacionesTitle">
+                    <Form.Label>Publicaciones del Usuario</Form.Label>
                 </Container>
-                <Container className="Publicaciones">
+                <Container id="Publicaciones">
                     { props.publicaciones.map( ( publicacion, index ) => (
-                        <Container className="Publicacion">
+                        <Container key={ index } className="Publicacion">
                             <Nav.Link href="/Home">
                                 <img className="PublicacionImage" src={ publicacion.multimedia } alt="imagen"></img>
                             </Nav.Link>

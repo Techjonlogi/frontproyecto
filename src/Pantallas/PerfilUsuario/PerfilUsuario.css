@@ -30,6 +30,24 @@ dd {
     border-radius: 10px;
 }
 
+.Publicacion {
+    margin: 2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 110px;
+    height: 110px;
+    background-color: #0e0d13;
+}
+
+.Publicacion:hover {
+    background-color: #2e2c38;
+}
+
+.PublicacionImage {
+    width: 98px;
+    height: 98px;
+}
+
 #EmptyLeftColumn {
     background-color: thistle;
 }
@@ -37,17 +55,23 @@ dd {
 #UserInfoColumn {
     height: fit-content;
     width: fit-content;
+    border-style: solid;
+    border-color: #18161f;
+    border-width: 10px;
     border-radius: 10px;
     margin: 10px;
-    background-color: blue;
+    background-color: #242230;
 }
 
 #UserPublicationsColumn {
     height: fit-content;
     width: fit-content;
+    border-style: solid;
+    border-color: #18161f;
+    border-width: 10px;
     border-radius: 10px;
     margin: 10px;
-    background-color: tomato;
+    background-color: #242230;
 }
 
 #EmptyRightColumn {
@@ -56,21 +80,26 @@ dd {
 
 #InformacionUsuarioPrincipal {
     margin: 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 270px;
     height: fit-content;
+    background-color: #2b2936;
 }
 
 #InformacionUsuarioCabeza {
     width: 245px;
     margin: 5px;
     margin-top: 10px;
+    background-color: #1a1824;
 }
 
 #InformacionUsuarioCuerpo {
     width: 245px;
     margin: 5px;
     margin-bottom: 10px;
-    background-color: turquoise;
+    background-color: #1a1824;
+    color: white;
 }
 
 #ModifyContainer {
@@ -86,6 +115,27 @@ dd {
 #PublicacionesUsuario {
     width: 700px;
     margin: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
+    background-color: #2b2936;
+}
+
+#PublicacionesTitle {
+    margin: 5px;
+    margin-top: 10px;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #1a1824;
+}
+
+#Publicaciones {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #1a1824;
 }
