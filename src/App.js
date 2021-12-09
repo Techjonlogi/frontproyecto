@@ -9,7 +9,7 @@ import CrearPublicacion from './Pantallas/CrearPublicacion/CrearPublicacion';
 import PerfilUsuario from './Pantallas/PerfilUsuario/PerfilUsuario';
 import UserRegistry from './Pantallas/UserRegistry/UserRegistry';
 import Busqueda from './Pantallas/Busqueda/Busqueda';
-import verComentariosAdmin from './Pantallas/verComentarioAdmin/verListacomentarios';
+import VerpublicacionEspecifica from './Pantallas/VerPublicacionEspecifica/VerPublicacionSeleccionada';
 
 
 
@@ -24,6 +24,7 @@ function App() {
      <Route exact path="Perfil" element={ <PerfilUsuario /> }></Route>
      <Route exact path="/" element={ <Home/> }></Route>
      <Route exact path="Busqueda/:search_query" element={ <Busqueda/> }></Route>
+     <Route exact path ="PublicacionSeleccionada/:idPublicacion" element ={<VerpublicacionEspecifica/>}></Route> 
      <Route path="*" element={ <Error404/> }></Route>
    </Routes>
    </BrowserRouter>
