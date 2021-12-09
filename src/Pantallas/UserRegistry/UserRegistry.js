@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './UserRegistry.css';
-
 import { Formik } from "formik";
 import { Container, Form, Row, Col } from "react-bootstrap";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
@@ -11,7 +10,6 @@ import ImagenFondo from "../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 import BasicFormPassword from "../ComponentesVarios/EntradaUsuario/BasicFormPassword";
-import BasicDropdownButton from "../ComponentesVarios/Botones/BasicDropdownButton";
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const UserRegistry = () => {
@@ -46,6 +44,8 @@ const UserRegistry = () => {
                 } ).catch( ( e ) => {
                     if( e.response.status === 429 ) {
                         alert( "Ya no puedes registrar otro usuario hoy." );
+                    } else if( e.response.status === 409 ) {
+                        alert( "El nombre de usuario ya existe." );
                     } else {
                         alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
                     }
