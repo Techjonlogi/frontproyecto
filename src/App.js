@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
-import ProtectedRoute from './Pantallas/ComponentesVarios/ProtectedRoutes/ProtectedRoute';
+import PrivateRoute from './Pantallas/ComponentesVarios/ProtectedRoutes/PrivateRoute';
 import Login from './Pantallas/Login/Login'
 import Home from './Pantallas/Home/Home';
 import Error404 from './Pantallas/PaginaError/Error404';
@@ -21,8 +21,10 @@ function App() {
      <Route exact path="Register" element={ <UserRegistry/> }></Route>
      <Route exact path="Busqueda/:search_query" element={ <Busqueda/> }></Route>
      <Route exact path="Perfil/:id_usuario" element={ <PerfilUsuario /> }></Route>
-     <Route exact path="PublicacionSeleccionada/:idPublicacion" element ={<VerpublicacionEspecifica/>}></Route> 
-     <Route exact path="Publicar" element={ <CrearPublicacion /> }></Route>
+     <Route exact path="PublicacionSeleccionada/:idPublicacion" element ={ <VerpublicacionEspecifica/> }></Route> 
+     <Route exact path="/Publicar" element={ <PrivateRoute /> }>
+       <Route exact path="/Publicar" element={ <CrearPublicacion /> }/>
+     </Route>
      <Route path="*" element={ <Error404/> }></Route>
    </Routes>
    </BrowserRouter>
