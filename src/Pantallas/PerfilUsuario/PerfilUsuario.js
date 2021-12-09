@@ -10,6 +10,7 @@ import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import InformacionUsuario from '../ComponentesVarios/PerfilUsuario/InformacionUsuario';
 import PublicacionesUsuario from "../ComponentesVarios/PerfilUsuario/PublicacionesUsuario";
+import ModifyUserInformation from "../ComponentesVarios/PerfilUsuario/ModifyUserInformation";
 
 const PerfilUsuario = () => {
     const [ usuario, setUsuario ] = useState( [] );
@@ -58,6 +59,7 @@ const PerfilUsuario = () => {
                     <Col id="EmptyLeftColumn" sm={ 2 }></Col>
                     <Col id="UserInfoColumn" sm={ 3 }>
                         <InformacionUsuario datos={ usuario }/>
+                        <ModifyUserInformation id_usuario={ usuario.clave_usuario } />
                     </Col>
                     <Col id="UserPublicationsColumn" sm={ 5 }>
                         <PublicacionesUsuario publicaciones={ publicaciones }/>
