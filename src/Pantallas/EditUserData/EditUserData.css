@@ -1,0 +1,53 @@
+.EditUserDataContent {
+    background-color: #2B293A;
+    align-items: center;
+    height: 95vh;
+    width: auto;
+}
+
+.BodyRow {
+    height: 100%;
+}
+
+.BasicFormInputGroup {
+    padding: 5px;
+}
+
+#EmptyLeftColumn {
+    background-color: #2B293A !important;
+}
+
+#EditUserDataColumn {
+    background-color: #242230;
+    height: fit-content;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #18161f;
+    border-width: 10px;
+    padding: 2%;
+    margin-top: 20px;
+}
+
+#EmptyRightColumn {
+    background-color: #2B293A !important;
+}
+
+#FormContainer {
+    background-color: #2b2936;
+    align-items: flex-start;
+    padding: 3%;
+}
+
+#EditUserDataContentLabel {
+    font-weight: bold;
+    font-size: larger;
+}
+
+#EditUserDataForm {
+    width: 100%;
+    margin: 10px;
+}
+
+#controlNombres, #controlApellidos, #controlNombreUsuario, #controlEmail, #controlPassword, #controlConfirmarPassword {
+    width: 100%;
+}

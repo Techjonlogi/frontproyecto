@@ -8,6 +8,7 @@ const BasicFormPassword = ( props ) => {
             <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
             <Form.Control 
                 className={ `FormControlInput ${ meta.touched && meta.error && 'is-invalid' }` }
+                id={ props.controlId }
                 type="password" placeholder={ props.placeholder }
                 { ...field }
             >
@@ -21,6 +22,7 @@ BasicFormPassword.defaultProps = {
     groupId: 'BasicFormInputGroup',
     labelId: 'BasicInputLabel',
     label: 'Entrada de Contraseña',
+    controlId: 'PasswordControl',
     placeholder: 'Introduce alguna contraseña'
 }
 
