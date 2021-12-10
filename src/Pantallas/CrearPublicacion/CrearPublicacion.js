@@ -37,7 +37,7 @@ const CrearPublicacion = () => {
             publicationData,
             ConfigWithAuth
           ).then( ( response ) => {
-            if( response.status === 201 ) {
+            if( response.status === 201 || response.status === 200 ) {
               alert( "¡Publicación exitosa!" );
               resetForm();
             }
@@ -46,6 +46,8 @@ const CrearPublicacion = () => {
               alert( "El nombre de la publicación ya existe." );
             } else if( e.response.status === 429 ) {
               alert( "Ya no puedes publicar más por hoy." );
+            } else if( e.response.status === 400 ) {
+              alert( "Información inválida." );
             } else {
               alert( "Ocurrió un error con el servidor. Inténtelo más tarde." );
             }
