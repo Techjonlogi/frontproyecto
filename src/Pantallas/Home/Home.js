@@ -45,7 +45,7 @@ const Home = () => {
   }, []);
 
   return (    
-    <>
+    <div className="PrincipalDiv">
       <NavBar />
       <Container className="containerPublicaciones">
 
@@ -58,7 +58,7 @@ const Home = () => {
         ))  }
       </Container>
       
-    </>
+    </div>
   );
 };
 
