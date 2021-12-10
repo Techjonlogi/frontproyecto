@@ -6,6 +6,7 @@ import { ConvertToBase64 } from "../ComponentesVarios/Utilidades/UtilityFunction
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigWithAuth";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
+import EditUserDataSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/EditUserDataSchema";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
@@ -25,6 +26,37 @@ const EditUserData = () => {
                 confirmar_contrasena: '',
                 archivo: ''
             } }
+            validationSchema= { EditUserDataSchema }
+            onSubmit= { async ( values ) => {
+                const data = {
+                    nombres: values.nombres,
+                    apellidos: values.apellidos,
+                    nombre_usuario: values.nombre_usuario,
+                    contrasena: values.contrasena,
+                    correo_electronico: values.correo_electronico,
+                    foto_perfil: ( await ConvertToBase64( values.archivo ) )
+                };
+
+                await Api.put(
+                    Endpoints.usuarios + "/" + localStorage.getItem( "KeyID" ),
+                    data,
+                    ConfigWithAuth
+                ).then( ( response ) => {
+                    if( response.status === 201 || response.status === 200) {
+                        window.location.replace( "http://localhost:3000/Perfil/" + localStorage.getItem( "KeyID" ) );
+                    }
+                } ).catch( ( e ) => {
+                    if( e.response.status === 429 ) {
+                        alert( "Ya no puedes modificar tus datos por hoy." );
+                    } else if( e.response.status === 409 ) {
+                        alert( "El nombre de usuario ya existe." );
+                    } else if( e.response.status === 404) {
+                        alert( "No se encontro el usuario especificado." );
+                    } else {
+                        alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
+                    }
+                } );
+            }  }
         >
         { formik => (
             <>
