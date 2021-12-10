@@ -31,7 +31,9 @@ function App() {
      <Route exact path="/Publicar" element={ <PrivateRoute /> }>
        <Route exact path="/Publicar" element={ <CrearPublicacion /> }/>
      </Route>
-     <Route exact path="/Perfil/EditUserData" element={ <EditUserData /> }/>
+     <Route exact path="/Perfil/EditUserData" element={ <PrivateRoute /> }>
+       <Route exact path="/Perfil/EditUserData" element={ <EditUserData /> }/>
+     </Route>
      <Route path="*" element={ <Error404/> }></Route>
    </Routes>
    </BrowserRouter>
