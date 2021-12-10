@@ -3,14 +3,15 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
 import PrivateRoute from './Pantallas/ComponentesVarios/ProtectedRoutes/PrivateRoute';
 import PublicRoute from './Pantallas/ComponentesVarios/ProtectedRoutes/PublicRoute';
-import Login from './Pantallas/Login/Login'
 import Home from './Pantallas/Home/Home';
-import Error404 from './Pantallas/PaginaError/Error404';
-import CrearPublicacion from './Pantallas/CrearPublicacion/CrearPublicacion';
-import PerfilUsuario from './Pantallas/PerfilUsuario/PerfilUsuario';
+import Login from './Pantallas/Login/Login';
 import UserRegistry from './Pantallas/UserRegistry/UserRegistry';
 import Busqueda from './Pantallas/Busqueda/Busqueda';
+import PerfilUsuario from './Pantallas/PerfilUsuario/PerfilUsuario';
 import VerpublicacionEspecifica from './Pantallas/VerPublicacionEspecifica/VerPublicacionSeleccionada';
+import CrearPublicacion from './Pantallas/CrearPublicacion/CrearPublicacion';
+import EditUserData from './Pantallas/EditUserData/EditUserData';
+import Error404 from './Pantallas/PaginaError/Error404';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
      <Route exact path="/Publicar" element={ <PrivateRoute /> }>
        <Route exact path="/Publicar" element={ <CrearPublicacion /> }/>
      </Route>
+     <Route exact path="/Perfil/EditUserData" element={ <EditUserData /> }/>
      <Route path="*" element={ <Error404/> }></Route>
    </Routes>
    </BrowserRouter>
