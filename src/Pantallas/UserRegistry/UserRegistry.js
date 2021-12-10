@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './UserRegistry.css';
-
 import { Formik } from "formik";
 import { Container, Form, Row, Col } from "react-bootstrap";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
@@ -11,7 +10,6 @@ import ImagenFondo from "../../Pantallas/Login/Imagenes/LoginImagen.jpeg";
 import BasicFormEmail from "../ComponentesVarios/EntradaUsuario/BasicFormEmail";
 import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 import BasicFormPassword from "../ComponentesVarios/EntradaUsuario/BasicFormPassword";
-import BasicDropdownButton from "../ComponentesVarios/Botones/BasicDropdownButton";
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const UserRegistry = () => {
@@ -40,10 +38,17 @@ const UserRegistry = () => {
                     data,
                     ConfigNoAuth
                 ).then( ( response ) => {
-                    console.log( response.data );
+                    if( response.status === 201 ) {
+                        window.location.replace( "http://localhost:3000/Login" );
+                    }
                 } ).catch( ( e ) => {
-                    console.log( e.response.status );
-                    console.log( e.response.data );
+                    if( e.response.status === 429 ) {
+                        alert( "Ya no puedes registrar otro usuario hoy." );
+                    } else if( e.response.status === 409 ) {
+                        alert( "El nombre de usuario ya existe." );
+                    } else {
+                        alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
+                    }
                 } );
             } }
         >
@@ -58,7 +63,6 @@ const UserRegistry = () => {
                             <Form.Label id="etiquetaPagina">Registro de Usuario</Form.Label>
                             <BasicFormInput labelId="etiquetaNombres" controlId="controlNombres" label="" name="nombres" placeholder="Nombres"/>
                             <BasicFormInput labelId="etiquetaApellidos" controlId="controlApellidos" label="" name="apellidos" placeholder="Apellidos" />
-                            <BasicDropdownButton dropdownId="BotonDropdown" title="Tipo de Usuario" items={ [ 'Artista', 'Buscador de Talento' ] } />
                             <BasicFormInput labelId="etiquetaNombreUsuario" controlId="controlNombreUsuario" label="" name="nombre_usuario" placeholder="Nombre de Usuario" />
                             <BasicFormEmail labelId="etiquetaEmail" label="" name="correo_electronico" placeholder="Correo Electrónico"/>
                             <BasicFormPassword labelId="etiquetaContrasena" label="" name="contrasena" placeholder="Contraseña"/>

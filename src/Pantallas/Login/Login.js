@@ -37,8 +37,11 @@ const Login = () => {
             window.location.replace( "http://localhost:3000/Home" );
           }
         } ).catch( ( e ) => {
-          console.log( e.response.status );
-          console.log( e.response.data );
+          if( e.response.status === 401 ) {
+            alert( "Usuario o contraseña incorrecta." );
+          } else {
+            alert( "Hubo un error con el servidor. Inténtalo más tarde." );
+          }
         } );
       } }
     >

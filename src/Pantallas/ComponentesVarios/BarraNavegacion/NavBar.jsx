@@ -20,7 +20,6 @@ const NavBar = () => {
       >
         { formik => (
           <>
-            { console.log( formik.values ) }
             <Navbar className="NavigationBar">
             <Row id="row">
               <Col className="BrandColumn" >

@@ -19,6 +19,8 @@ const PublicationinputSchema = Yup.object( {
         .integer(),
     archivo: Yup.mixed()
         .required( 'Por favor selecciona un archivo' )
+        .test( 'fileSize', 'El archivo es demasiado grande.', value =>  value && value.size <= 350000 )
+        .test( 'fileType', 'Tipo de archivo invalido.', value => value && [ 'image/jpg', 'image/jpeg', 'image/png' ].includes( value.type ) )
 } );
 
 export default PublicationinputSchema;

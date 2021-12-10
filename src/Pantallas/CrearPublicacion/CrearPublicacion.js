@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./CrearPublicacion.css";
-
 import { Formik } from "formik";
 import { Container, Form, Col, Row } from "react-bootstrap";
 import { ConvertToBase64 } from "../ComponentesVarios/Utilidades/UtilityFunctions";
@@ -25,7 +24,7 @@ const CrearPublicacion = () => {
         archivo: ''
       } }
       validationSchema= { PublicationinputSchema }
-      onSubmit={ async ( values ) => {
+      onSubmit={ async ( values, { resetForm } ) => {
           const publicationData = {
             nombre_publicacion: values.nombre_publicacion,
             descripcion: values.descripcion_publicacion,
@@ -33,18 +32,23 @@ const CrearPublicacion = () => {
             multimedia: ( await ConvertToBase64( values.archivo ) )
           }
 
-          console.log( publicationData );
           await Api.post(
             Endpoints.publicacionesUsuario + "/" + localStorage.getItem( "KeyID" ),
             publicationData,
             ConfigWithAuth
           ).then( ( response ) => {
             if( response.status === 201 ) {
-              console.log( response.data )
+              alert( "¡Publicación exitosa!" );
+              resetForm();
             }
           } ).catch( ( e ) => {
-            console.log( e.response.status );
-            console.log( e.response.data );
+            if( e.response.status === 409 ) {
+              alert( "El nombre de la publicación ya existe." );
+            } else if( e.response.status === 429 ) {
+              alert( "Ya no puedes publicar más por hoy." );
+            } else {
+              alert( "Ocurrió un error con el servidor. Inténtelo más tarde." );
+            }
           } );
       } }
     >

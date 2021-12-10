@@ -11,7 +11,7 @@ const PublicacionesUsuario = ( props ) => {
                 <Container id="Publicaciones">
                     { props.publicaciones.map( ( publicacion, index ) => (
                         <Container key={ index } className="Publicacion">
-                            <Nav.Link href="/Home">
+                            <Nav.Link href={ `/PublicacionSeleccionada/${ publicacion.clave_publicacion }` }>
                                 <img className="PublicacionImage" src={ publicacion.multimedia } alt="imagen"></img>
                             </Nav.Link>
                         </Container>

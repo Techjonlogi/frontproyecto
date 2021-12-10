@@ -43,15 +43,18 @@
 .ListItemRow {
     display: flex;
     align-items: center;
-
 }
 
-.ItemImage {
+.IconoPublicacion, .IconColumn, .FotoPerfilUsuario {
+    background-color: #4d4b58;
+}
+
+.ItemImage, .ImagenPerfil {
     width: 60px;
     height: 60px;
 }
 
-.TituloPublicacion {
+.TituloPublicacion, .NombreUsuario {
     height: 22px;
     background-color: #4d4b58;
     color: white;
@@ -65,13 +68,6 @@
 }
 
 .DetallesUsuario {
-    background-color: #4d4b58;
-    color: white;
-    align-items: flex-start;
-}
-
-.NombreUsuario {
-    height: 22px;
     background-color: #4d4b58;
     color: white;
     align-items: flex-start;
@@ -100,14 +96,7 @@
     margin-top: 20px;
 }
 
-#PublicacionesList {
-    width: 100%;
-    background-color: #4d4b58;
-    margin-top: 1%;
-    margin-bottom: 1%;
-}
-
-#UsuariosList {
+#PublicacionesList, #UsuariosList {
     width: 100%;
     background-color: #4d4b58;
     margin-top: 1%;

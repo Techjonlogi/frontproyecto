@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './Busqueda.css';
-
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
@@ -26,10 +25,7 @@ const Busqueda = () => {
                     setPublicaciones( response.data );
                     setLoaded( true );
                 }
-            } ).catch( ( e ) => {
-                console.log( e.response.status );
-                console.log( e.response.data );
-            } );
+            } ).catch( ( e ) => {} );
         }
 
         async function sendUsuarioSearchRequest() {
@@ -41,10 +37,7 @@ const Busqueda = () => {
                     setUsuarios( response.data );
                     setLoaded( true );
                 }
-            } ).catch( ( e ) => {
-                console.log( e.response.status );
-                console.log( e.response.data );
-            } );
+            } ).catch( ( e ) => {} );
         }
 
         sendPublicationSearchRequest();
