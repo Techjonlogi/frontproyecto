@@ -52,6 +52,8 @@ const EditUserData = () => {
                         alert( "El nombre de usuario ya existe." );
                     } else if( e.response.status === 404) {
                         alert( "No se encontro el usuario especificado." );
+                    } else if( e.response.status === 400) {
+                        alert( "Información inválida." );
                     } else {
                         alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
                     }
