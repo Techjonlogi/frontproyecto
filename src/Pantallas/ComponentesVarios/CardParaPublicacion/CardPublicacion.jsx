@@ -17,14 +17,14 @@ const IraPublicacion =()=>{
 
     return (
       <>
-        <Card style={{ width: "15rem"}} className="bodyCard">
-          <Card.Img className="ImageCard" variant="top" src={multimedia} />
+        <Card style={{ width: "14rem"}} className="bodyCard">
+          <Card.Img className="ImageCard" variant="top" src={multimedia} onClick={IraPublicacion} />
           <Card.Body>
             <Card.Title>{nombre_publicacion}</Card.Title>
             <Card.Text>
               {descripcion}
             </Card.Text>
-            <Button variant="primary" className="buttonCard"  onClick={IraPublicacion} >Ir a publicacion</Button>
+           
           </Card.Body>
         </Card>
       </>
