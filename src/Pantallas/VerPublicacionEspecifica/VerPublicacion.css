@@ -59,3 +59,15 @@ td {
 .formInformacion{
     align-items: center;
 }
+
+.SelectedImage{
+    width: 750px;
+    height: auto;
+}
+
+.ColumnImage{
+
+width: 96%;
+max-width: 960px;
+margin: 0 auto;
+}

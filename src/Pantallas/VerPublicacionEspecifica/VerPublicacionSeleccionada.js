@@ -64,8 +64,8 @@ useEffect(() => {
         </Form>
         </Col>
         
-        <Col>
-        <img src={publicacion.multimedia}></img>
+        <Col className="ColumnImage">
+        <img className="SelectedImage" src={publicacion.multimedia}></img>
         </Col>
        
     </Row>

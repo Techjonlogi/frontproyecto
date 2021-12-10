@@ -5,3 +5,18 @@ html {
 .HomeContent {
     background-color: #2B293A;
 }
+
+.containerPublicaciones{
+
+   background-color: white;
+   display: flex;
+     
+    display: grid;
+    grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4];
+    grid-template-rows: 0.5fr 1fr;
+   
+}
+
+.body{
+    background-color: #2B293A !important;
+}
