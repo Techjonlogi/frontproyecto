@@ -1,6 +1,5 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./CrearPublicacion.css";
-
 import { Formik } from "formik";
 import { Container, Form, Col, Row } from "react-bootstrap";
 import { ConvertToBase64 } from "../ComponentesVarios/Utilidades/UtilityFunctions";
@@ -33,7 +32,6 @@ const CrearPublicacion = () => {
             multimedia: ( await ConvertToBase64( values.archivo ) )
           }
 
-          console.log( publicationData );
           await Api.post(
             Endpoints.publicacionesUsuario + "/" + localStorage.getItem( "KeyID" ),
             publicationData,
@@ -56,7 +54,6 @@ const CrearPublicacion = () => {
     >
       { formik => (
         <>
-          { console.log( formik.values ) }
           <NavBar />
           <Container className="CreatePublicationContent" fluid>
             <Row className="BodyRow">
