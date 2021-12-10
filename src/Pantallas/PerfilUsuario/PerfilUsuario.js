@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './PerfilUsuario.css';
-
 import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -27,8 +26,9 @@ const PerfilUsuario = () => {
                     setUsuario( response.data );
                 }
             } ).catch( ( e ) => {
-                console.log( e.response.status );
-                console.log( e.response.data );
+                if( e.response.status === 404 ) {
+                    alert( "No se encontró el usuario especificado." );
+                }
             } );
         }
 
@@ -41,8 +41,9 @@ const PerfilUsuario = () => {
                     setPublicaciones( response.data );
                 }
             } ).catch( ( e ) => {
-                console.log( e.response.status );
-                console.log( e.response.data );
+                if( e.response.status != 404 ) {
+                    alert( "Ocurrió un error con el servidor. Inténtelo más tarde." );
+                }
             } );
         }
 
@@ -52,7 +53,6 @@ const PerfilUsuario = () => {
 
     return (
         <>
-            { console.log( usuario ) }
             <NavBar />
             <Container className="PerfilContent" fluid>
                 <Row className="BodyRow">
