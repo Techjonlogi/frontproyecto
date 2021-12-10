@@ -8,6 +8,7 @@ const BasicFormEmail = ( props ) => {
             <Form.Label className="FormLabel" id={ props.labelId } htmlFor={ field.name }>{ props.label }</Form.Label>
             <Form.Control 
                 className={ `FormControlInput ${ meta.touched && meta.error && 'is-invalid' }` }
+                id={ props.controlId }
                 type="email" placeholder={ props.placeholder }
                 { ...field }
             >
@@ -21,6 +22,7 @@ BasicFormEmail.defaultProps = {
     groupId: 'BasicFormEmailGroup',
     labelId: 'BasicEmailLabel',
     label: 'Correo Electrónico',
+    controlId: 'EmailControl',
     placeholder: 'Introduce tu correo electrónico'
 }
 

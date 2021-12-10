@@ -67,13 +67,14 @@ const EditUserData = () => {
                         <Col id="EditUserDataColumn" sm={ 6 }>
                             <Container id="FormContainer">
                                 <Form id="EditUserDataForm" onSubmit={ formik.handleSubmit }>
-                                    <BasicFormInput labelId="etiquetaNombres" label="Nombres" controlId="controlNombres" name="nombres" placeholder="Introduce tu nuevo nombre."/>
+                                    <Form.Label id="EditUserDataContentLabel">Editar Datos de usuario</Form.Label>
+                                    <BasicFormInput labelId="etiquetaNombres" label="Nombres" controlId="controlNombres" name="nombres" placeholder="Introduce tus nuevos nombres."/>
                                     <BasicFormInput labelId="etiquetaApellidos" label="Apellidos" controlId="controlApellidos" name="apellidos" placeholder="Introduce tus nuevos apellidos."/>
                                     <BasicFormInput labelId="etiquetaNombreUsuario" label="Nombre Usuario" controlId="controlNombreUsuario" name="nombre_usuario" placeholder="Introduce tu nuevo usuario."/>
-                                    <BasicFormEmail labelId="etiquetaEmail" label="Correo" name="correo_electronico" placeholder="Intruce tu nuevo correo electrónico"/>
-                                    <BasicFormPassword labelId="etiquetaContrasena" label="Contraseña" name="contrasena" placeholder="Contraseña"/>
-                                    <BasicFormPassword labelId="etiquetaConfirmarContrasena" label="Confirmar Contraseña" name="confirmar_contrasena" placeholder="Confirmar Contraseña"/>
-                                    <BasicFormFileInput name="archivo" valueFunc={ formik.setFieldValue }/>
+                                    <BasicFormEmail labelId="etiquetaEmail" label="Correo" controlId="controlEmail" name="correo_electronico" placeholder="Intruce tu nuevo correo electrónico"/>
+                                    <BasicFormPassword labelId="etiquetaContrasena" label="Contraseña" controlId="controlPassword" name="contrasena" placeholder="Contraseña"/>
+                                    <BasicFormPassword labelId="etiquetaConfirmarContrasena" label="Confirmar Contraseña" controlId="controlConfirmarPassword" name="confirmar_contrasena" placeholder="Confirmar Contraseña"/>
+                                    <BasicFormFileInput label="Selecciona tu foto de perfil" name="archivo" valueFunc={ formik.setFieldValue }/>
                                     <BasicButton content="Editar Datos" buttonType="submit"/>
                                 </Form>
                             </Container>
