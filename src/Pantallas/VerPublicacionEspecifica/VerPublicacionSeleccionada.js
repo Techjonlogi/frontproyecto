@@ -1,10 +1,13 @@
 import {React, useEffect, useState} from "react";
-import { Row,Col,Form, Table, Button, Navbar } from "react-bootstrap";
+import { Row,Col,Form, Table, Button} from "react-bootstrap";
 import '../VerPublicacionEspecifica/VerPublicacion.css'
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import { useParams } from "react-router-dom";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
+import { Formik, Field} from "formik";
+import ComentariInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/ComentariInputSchema";
+import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 
 
 
@@ -14,7 +17,7 @@ const VerpublicacionEspecifica = () => {
 const {idPublicacion} = useParams();
 
 const [publicacion, setPublicacion] = useState({clave_publicacion:'',nombre_publicacion: '',descripcion: '',calificacion_general:'',categoria: '', multimedia: '',fecha_publicacion:''});
-
+const [comentarios,setComentarios] = useState([]);
 
 const llenarPagina= async()=>{
     let publicacionbase = {clave_publicacion:'',nombre_publicacion: '',descripcion: '',calificacion_general:'',categoria: '', multimedia: '',fecha_publicacion:''};
@@ -28,15 +31,25 @@ const llenarPagina= async()=>{
     await Api.get(Endpoints.multimedia +"/"+idPublicacion+Endpoints.obtenerMultimediaEspecifica).then((res)=>{
          multimedia = res.data;
          publicacionbase.multimedia = multimedia.multimedia;
-        console.log(publicacionbase)
         setPublicacion(publicacionbase);
-        console.log(publicacion);
+        
     }).catch((e) => alert("No se pudo cargar la imagen de la publicacion"));
+
+}
+
+const llenarComentarios = async()=>{
+    await Api.get(Endpoints.comentario +"/"+idPublicacion).then((res)=>{
+        setComentarios(res.data);
+
+    }).catch((e) =>(
+        alert("Error al recuperar los comentarios")
+    ))
 
 }
 
 useEffect(() => {
     llenarPagina();
+    llenarComentarios()
   }, []);
 
 
@@ -76,20 +89,66 @@ useEffect(() => {
             <thead>
                 <tr>
                     <th>usuario</th>
-                    <th>Comentario</th>
-                    <th>Opciones</th>
-                    
+                    <th>Comentario</th>                   
                 </tr>
             </thead>
+            {comentarios.map(comentario =>(
+            <tbody>
+                <tr>
+                    <td>{comentario.clave_usuario}</td>
+                    <td>{comentario.comentario}</td>
+                    
+                </tr>
+            </tbody>
+
+            ))
+
+            }
+            
 
         </Table>
-        <Form className="formComentarios">
-        <Form.Control className="imputComentario" type="text" placeholder ="ingrese su comentario"></Form.Control>
+<Formik
+initialValues={
+    {
+        comentario: ''
+    }
+}
+
+validationSchema={ComentariInputSchema}
+
+onSubmit={async (values) =>{
+    const data = {
+        comentario: values.comentario,
+        clave_publicacion: idPublicacion,
+        clave_usuario: localStorage.getItem("KeyID")
+    }
+
+    Api.post(Endpoints.comentario, data, ConfigNoAuth)
+    .then((res) =>{
+        if(res.status === 201){
+            let url="/PublicacionSeleccionada/"+idPublicacion;
+            window.location.assign(url); 
+        }
+    }).catch((e) =>{
+        alert("Hubo un error en el registro")
+    })
+}}
+
+>
+    {formik =>(
+    <Form className="formComentarios"  onSubmit={formik.handleSubmit}>
+        <Field className="imputComentario" type="text" placeholder ="ingrese su comentario" name="comentario"></Field>
         <Row className="wrapper">
-        <Button className="btnPublicar">Comentar</Button>
+        <Button className="btnPublicar" type="submit" >Comentar</Button>
         </Row>
         
         </Form>
+
+    )
+
+    }
+</Formik>
+        
     </Row>
 </section>
 </>
