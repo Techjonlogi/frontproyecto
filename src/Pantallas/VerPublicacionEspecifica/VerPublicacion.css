@@ -2,6 +2,7 @@
     align-items: center;
     background-color:#2B293A ;
     color: #2B293A;
+    
 
 }
 
@@ -11,25 +12,33 @@
 
 .tablaComentarios{
 width: 50%;
-color:white;
-
 margin: auto;
+background-color: white;
 }
 
 .imputComentario{
-    margin: auto;
-    width: 50%;
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+
 }
 
 .btnPublicar{
-  width: 10%;
+    padding: 0.5em 1em;
+    border: none;
 
     
 }
 
 .formComentarios{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: left;
+    
 }
 
 .wrapper {
@@ -43,14 +52,7 @@ margin: auto;
 
  }
 
-  th {
-    border: 5px solid red;
-    padding: 8px 0;
-}
-td {
-    border: 5px solid red;
-    padding: 8px 0;
-}
+
 
 .basicInput{
     width: 75%;
@@ -71,3 +73,4 @@ width: 96%;
 max-width: 960px;
 margin: 0 auto;
 }
+
