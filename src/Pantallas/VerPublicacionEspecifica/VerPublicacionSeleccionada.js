@@ -122,8 +122,10 @@ onSubmit={async (values) =>{
         clave_publicacion: idPublicacion,
         clave_usuario: localStorage.getItem("KeyID")
     }
-
-    Api.post(Endpoints.comentario, data, ConfigNoAuth)
+    if( localStorage.getItem("KeyID") === null || localStorage.getItem("Token") === "" ){
+        alert("Logeate primero para poder comentar")
+    }else{
+        Api.post(Endpoints.comentario, data, ConfigNoAuth)
     .then((res) =>{
         if(res.status === 201){
             let url="/PublicacionSeleccionada/"+idPublicacion;
@@ -132,6 +134,10 @@ onSubmit={async (values) =>{
     }).catch((e) =>{
         alert("Hubo un error en el registro")
     })
+
+    }
+
+  
 }}
 
 >
