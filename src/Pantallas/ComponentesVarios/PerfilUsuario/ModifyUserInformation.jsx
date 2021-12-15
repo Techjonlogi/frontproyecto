@@ -1,4 +1,4 @@
-import { Container, Nav } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import PropTypes from "prop-types";
 import BasicButton from "../Botones/BasicButton";
 
