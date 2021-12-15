@@ -2,8 +2,6 @@
     align-items: center;
     background-color:#2B293A ;
     color: #2B293A;
-    
-
 }
 
 .seccionPublicacion{
@@ -11,36 +9,26 @@
 }
 
 .tablaComentarios{
-width: 50%;
-margin: auto;
-background-color: #607397;
-border-color: black;
-color: white;
-
-
+    width: 50%;
+    margin: auto;
+    background-color: #607397;
+    border-color: black;
+    color: white;
 }
 
 tbody tr:nth-child(odd) {
     background-color: white;
-    
-  }
-
-  
-
- 
+}
 
 .imputComentario{
     width: 90%;
     height: 30px;
     margin: 0.5rem;
-
 }
 
 .btnPublicar{
     padding: 0.5em 1em;
     border: none;
-
-    
 }
 
 .formComentarios{
@@ -51,21 +39,17 @@ tbody tr:nth-child(odd) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
  .basicLabel{
      color: black;
-
- }
-
-
+}
 
 .basicInput{
     width: 75%;
@@ -81,9 +65,12 @@ tbody tr:nth-child(odd) {
 }
 
 .ColumnImage{
-
 width: 96%;
 max-width: 960px;
 margin: 0 auto;
 }
 
+#controlComentario {
+    width: 450px;
+    background-color: white;
+}

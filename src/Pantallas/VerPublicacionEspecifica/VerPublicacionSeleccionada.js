@@ -8,6 +8,7 @@ import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import ComentariInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/ComentariInputSchema";
 import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigWithAuth";
+import BasicFormInput from "../ComponentesVarios/EntradaUsuario/BasicFormInput";
 
 const VerPublicacionSeleccionada = () => {
     const { idPublicacion } = useParams();
@@ -116,7 +117,7 @@ const VerPublicacionSeleccionada = () => {
                     >
                     { formik => (
                         <Form className="formComentarios"  onSubmit={formik.handleSubmit}>
-                            <Field className="imputComentario" type="text" placeholder ="ingrese su comentario" name="comentario"></Field>
+                            <BasicFormInput labelId="etiquetaComentario" controlId="controlComentario" label="" name="comentario" placeholder="ingrese su comentario"/>
                             <Row className="wrapper">
                             <Button className="btnPublicar" type="submit" >Comentar</Button>
                             </Row>
