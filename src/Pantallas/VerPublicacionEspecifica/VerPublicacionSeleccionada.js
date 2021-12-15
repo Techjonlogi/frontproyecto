@@ -128,6 +128,6 @@ const VerPublicacionSeleccionada = () => {
             </section>
         </>
     );
-}
+};
 
 export default VerPublicacionSeleccionada;
