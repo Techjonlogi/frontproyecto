@@ -1,8 +1,17 @@
+th {
+    border: 5px solid red;
+    padding: 8px 0;
+}
+
+td {
+    border: 5px solid red;
+    padding: 8px 0;
+}
+
 .seccionComentarios{
     align-items: center;
     background-color:#2B293A ;
     color: #2B293A;
-
 }
 
 .seccionPublicacion{
@@ -10,10 +19,9 @@
 }
 
 .tablaComentarios{
-width: 50%;
-color:white;
-
-margin: auto;
+    width: 50%;
+    color:white;
+    margin: auto;
 }
 
 .imputComentario{
@@ -22,18 +30,17 @@ margin: auto;
 }
 
 .btnPublicar{
-  width: 10%;
-  width: auto;
-  margin: 50px;
-
-    
+    width: 10%;
+    width: auto;
+    margin: 50px;
 }
+
 .btnCancelar{
     width: 10%;
     width: auto;
-   position: relative;
+    position: relative;
       
-  }
+}
 
 .formComentarios{
     align-items: center;
@@ -44,32 +51,23 @@ margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
- .basicLabel{
-     color: black;
-
- }
-
-  th {
-    border: 5px solid red;
-    padding: 8px 0;
-}
-td {
-    border: 5px solid red;
-    padding: 8px 0;
 }
 
-.basicInput{
+ .basicLabel {
+    color: black;
+
+}
+
+.basicInput {
     width: 75%;
 }
 
-.formInformacion{
+.formInformacion {
     align-items: center;
 }
 
 
-.inputImagen{
+.inputImagen {
     width: 75%;
 }
 

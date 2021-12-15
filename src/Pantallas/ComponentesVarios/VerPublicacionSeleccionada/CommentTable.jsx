@@ -10,14 +10,14 @@ const CommentTable = ( props ) => {
                         <th>Comentario</th>                   
                     </tr>
                 </thead>
-                { props.comentarios.map( comentario => (
                 <tbody>
-                    <tr>
+                { props.comentarios.map( ( comentario, index ) => (
+                    <tr key={ index }>
                         <td>{ comentario.nombre_usuario }</td>
                         <td>{ comentario.comentario }</td>
                     </tr>
-                </tbody>
                 ) ) }
+                </tbody>
             </Table>
         </>
     );

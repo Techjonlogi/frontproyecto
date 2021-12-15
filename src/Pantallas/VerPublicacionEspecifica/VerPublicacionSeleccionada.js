@@ -17,7 +17,6 @@ const VerPublicacionSeleccionada = () => {
     const llenarPagina = async () => {
         await Api.get( Endpoints.publicaciones + "/" + idPublicacion ).then( ( res ) => {
             setPublicacion( res.data );
-            console.log( res.data );
         } ).catch( ( e ) =>
             alert("No se pudo recuperar la publicacion") 
         );
