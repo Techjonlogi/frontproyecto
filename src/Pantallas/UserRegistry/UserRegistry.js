@@ -38,12 +38,14 @@ const UserRegistry = () => {
                     data,
                     ConfigNoAuth
                 ).then( ( response ) => {
-                    if( response.status === 201 ) {
+                    if( response.status === 201 || response.status === 200 ) {
                         window.location.replace( "http://localhost:3000/Login" );
                     }
                 } ).catch( ( e ) => {
                     if( e.response.status === 429 ) {
                         alert( "Ya no puedes registrar otro usuario hoy." );
+                    } else if( e.response.status === 400 ) {
+                        alert( "Información inválida." );
                     } else if( e.response.status === 409 ) {
                         alert( "El nombre de usuario ya existe." );
                     } else {

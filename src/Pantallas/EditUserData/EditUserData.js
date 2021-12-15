@@ -48,10 +48,12 @@ const EditUserData = () => {
                 } ).catch( ( e ) => {
                     if( e.response.status === 429 ) {
                         alert( "Ya no puedes modificar tus datos por hoy." );
+                    } else if( e.response.status === 400) {
+                        alert( "Información inválida." );
+                    } else if( e.response.status === 404 ) {
+                        alert( "No se encontro el usuario especificado." );
                     } else if( e.response.status === 409 ) {
                         alert( "El nombre de usuario ya existe." );
-                    } else if( e.response.status === 404) {
-                        alert( "No se encontro el usuario especificado." );
                     } else {
                         alert( "Ocurrio un error con el servidor. Inténtelo más tarde" );
                     }
