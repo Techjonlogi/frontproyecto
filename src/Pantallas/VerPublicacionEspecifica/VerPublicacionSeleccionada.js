@@ -34,7 +34,6 @@ const VerPublicacionSeleccionada = () => {
     const llenarComentarios = async()=>{
         await Api.get( Endpoints.comentario + "/" + idPublicacion ).then( ( res ) => {
             setComentarios( res.data );
-
         } ).catch( ( e ) => (
             alert( "Error al recuperar los comentarios" )
         ) )
