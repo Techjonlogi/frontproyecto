@@ -15,6 +15,8 @@ import BasicFormSelect from "../ComponentesVarios/EntradaUsuario/BasicFormSelect
 import BasicButton from "../ComponentesVarios/Botones/BasicButton";
 
 const CrearPublicacion = () => {
+  let categorias = [ 'Conceptual', 'Digital', 'Pintura', 'Escultura', 'Cine', 'Música', 'Danza' ];
+
   return (
     <Formik
       initialValues= { {
@@ -67,7 +69,7 @@ const CrearPublicacion = () => {
                     <BasicFormFileInput name="archivo" valueFunc={ formik.setFieldValue }/>
                     <BasicFormInput labelId="etiquetaNombrePublicacion" label="Nombre Publicación" controlId="controlNombrePublicacion" name="nombre_publicacion" placeholder="Introduce el nombre de la publicación"/>
                     <BasicFormTextArea labelId="etiquetaDescripcion" label="Descripción Publicación" controlId="controlDescripcion" name="descripcion_publicacion" placeholder="Introduce la descripción de la publicación"/>
-                    <BasicFormSelect labelId="etiquetaCategoria" label="Categoria de Publicación" selectId="selectCategoria" name="categoria" options={ [ 'Digital', 'Pintura' ] }/>
+                    <BasicFormSelect labelId="etiquetaCategoria" label="Categoria de Publicación" selectId="selectCategoria" name="categoria" options={ categorias }/>
                     <BasicButton content="Crear Publicación" buttonType="submit"/>
                   </Form>
                 </Container>

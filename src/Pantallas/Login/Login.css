@@ -17,8 +17,10 @@
 }
 
 .LigasContainer {
-    text-align: left;
+    text-align: center;
     background-color: #2B293A !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .UserInputForm {
