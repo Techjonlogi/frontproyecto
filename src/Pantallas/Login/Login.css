@@ -1,8 +1,11 @@
-.icon-img{
+label {
+    color:white;
+}
+
+.icon-img {
     width: 70px;
     height: 70px; 
     margin-bottom: 2rem; 
-
 }
 
 .btn-primary {
@@ -17,8 +20,10 @@
 }
 
 .LigasContainer {
-    text-align: left;
+    text-align: center;
     background-color: #2B293A !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .UserInputForm {
@@ -36,11 +41,11 @@
     width: 300px;
 }
 
-#bodyLogin{
+#bodyLogin {
     background-color: #2B293A;
 }
 
-#ContenedorPrincipal{
+#ContenedorPrincipal {
     background-color: #2B293A;
     display: flex;
     flex-direction: column;
@@ -48,14 +53,10 @@
     width: 100%;
 }
 
-#ImagenFondo{
+#ImagenFondo {
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 150%;
-}
-
-label{
-    color:white;
 }

@@ -7,14 +7,19 @@ html {
 }
 
 .containerPublicaciones{
-
-   background-color: white;
-   display: flex;
-     
+    width: fit-content;
+    height: fit-content !important;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-style: solid;
+    border-color: #18161f;
+    border-width: 10px;
+    border-radius: 10px;
+    background-color: #3c3a49;
+    display: flex;
     display: grid;
     grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4];
     grid-template-rows: 1.5fr 1fr;
-   
 }
 
 .body{

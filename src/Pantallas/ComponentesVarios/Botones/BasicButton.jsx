@@ -2,7 +2,7 @@ import { Button } from "react-bootstrap";
 
 const BasicButton = ( props ) => {
     return (
-        <Button className="BasicButton" id={ props.buttonId } type={ props.buttonType }>{ props.content }</Button>
+        <Button className="BasicButton" id={ props.buttonId } type={ props.buttonType } onClick={ props.onClick }>{ props.content }</Button>
     );
 };
 

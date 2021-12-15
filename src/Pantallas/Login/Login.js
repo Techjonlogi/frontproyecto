@@ -54,9 +54,13 @@ const Login = () => {
                 <BasicFormInput groupId="formBasicEmail" label="Usuario" controlId="inputUsuario" name="nombre_usuario" placeholder="Ingrese su nombre de usuario"/>
                 <BasicFormPassword groupId="formBasicPassword" label="Contraseña" controlId="inputContrasena" name="contrasena" placeholder="Contraseña"/>
                 <BasicButton content="Ingresar" buttonType="submit"/>
-                <Container className="LigasContainer">
-                  <a href="/Login"><small className="reset">Recuperar Contraseña</small></a>
-                  <a href="/Register"><small className="reset ml-2" >Registrate</small></a>
+                <Container>
+                  <Container className="LigasContainer">
+                    <a href="/Login"><small className="reset">Recuperar Contraseña</small></a>
+                  </Container>
+                  <Container className="LigasContainer">
+                    <a href="/Register"><small className="reset ml-2" >Registrate</small></a>
+                  </Container>
                 </Container>
               </Form>
             </Col>

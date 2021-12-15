@@ -3,10 +3,14 @@ import PropTypes from "prop-types";
 import BasicButton from "../Botones/BasicButton";
 
 const ModifyUserInformation = ( props ) => {
+    const redirect = () => {
+        window.location.assign( "http://localhost:3000/Perfil/EditUserData" )
+    }
+
     if( props.id_usuario == localStorage.getItem( "KeyID" ) ) {
         return (
             <Container className="Capsula" id="ModifyContainer">
-                <BasicButton buttonId="EditarButton" content="Editar Datos"/>
+                <BasicButton buttonId="EditarButton" content="Editar Datos" onClick={ redirect }/>
             </Container>
         );
     } else {

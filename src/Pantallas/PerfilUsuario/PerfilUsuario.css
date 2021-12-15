@@ -4,14 +4,14 @@ dl {
 
 dt {
     width: 50%;
-    padding: 2px;
+    padding: 4px;
     margin: 0;
     float: left;
 }
 
 dd {
     width: 50%;
-    padding: 2px;
+    padding: 4px;
     margin: 0;
     float: right;
 }
@@ -26,16 +26,16 @@ dd {
 }
 
 .Capsula {
-    margin: 5px;
     border-radius: 10px;
 }
 
 .Publicacion {
-    margin: 2px;
+    margin: 4px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 110px;
-    height: 110px;
+    padding: 0px;
+    width: fit-content;
+    height: fit-content;
     background-color: #0e0d13;
 }
 
@@ -46,6 +46,16 @@ dd {
 .PublicacionImage {
     width: 98px;
     height: 98px;
+}
+
+.ProfileImage {
+    width: 225px;
+    height: 200px;
+}
+
+.InformacionUsuarioCabezaRow {
+    padding-top: 5px;
+    align-items: center !important;
 }
 
 #EmptyLeftColumn {
@@ -80,31 +90,44 @@ dd {
 
 #InformacionUsuarioPrincipal {
     margin: 7px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
-    width: 270px;
+    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 4px;
+    width: 300px;
     height: fit-content;
     background-color: #2b2936;
 }
 
 #InformacionUsuarioCabeza {
-    width: 245px;
+    width: 280px;
+    height: 245px;
     margin: 5px;
-    margin-top: 10px;
+    text-align: center;
     background-color: #1a1824;
 }
 
 #InformacionUsuarioCuerpo {
-    width: 245px;
+    width: 280px;
+    height: 180px;
     margin: 5px;
     margin-bottom: 10px;
+    padding: 0px;
+    padding-left: 5px;
     background-color: #1a1824;
     color: white;
 }
 
+#ProfileImageRow {
+    padding-left: 15px;
+}
+
 #ModifyContainer {
-    margin: 7px;
-    width: 270px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 298px;
     height: fit-content;
     background-color: #2b2936;
 }
@@ -118,6 +141,8 @@ dd {
     margin: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 10px;
     background-color: #2b2936;
 }
@@ -125,7 +150,8 @@ dd {
 #PublicacionesTitle {
     margin: 5px;
     margin-top: 10px;
-    align-items: center;
+    margin-bottom: 10px;
+    text-align: center;
     border-radius: 10px;
     background-color: #1a1824;
 }
@@ -137,6 +163,7 @@ dd {
     justify-content: center;
     margin: 5px;
     margin-bottom: 10px;
+    padding: 3px;
     border-radius: 10px;
     background-color: #1a1824;
 }
