@@ -16,6 +16,7 @@ const Home = () => {
     await Api.get( Endpoints.publicaciones )
       .then( ( res ) => {
         publicaciones = res.data;
+        console.log( publicaciones );
       } ).catch( ( e ) =>
         alert( "ocurrio algun error al recuperar las publicaciones" )
       );

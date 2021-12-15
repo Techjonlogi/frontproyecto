@@ -7,7 +7,7 @@ import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import ComentariInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/ComentariInputSchema";
-import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
+import ConfigWithAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigWithAuth";
 
 const VerPublicacionSeleccionada = () => {
     const { idPublicacion } = useParams();
@@ -98,19 +98,19 @@ const VerPublicacionSeleccionada = () => {
                                 clave_usuario: localStorage.getItem( "KeyID" )
                             }
                             if( localStorage.getItem( "KeyID" ) === null || localStorage.getItem( "Token" ) === "" ){
-                                alert("Logeate primero para poder comentar")
+                                alert( "Inicia Sesión primero para poder comentar" )
                             } else {
                                 Api.post( 
                                     Endpoints.comentario, 
                                     data, 
-                                    ConfigNoAuth 
+                                    ConfigWithAuth 
                                 ).then( ( res ) => {
                                     if( res.status === 201 ) {
                                         let url="/PublicacionSeleccionada/" + idPublicacion;
                                         window.location.assign( url ); 
                                     }
                                 } ).catch( ( e ) => {
-                                    alert("Hubo un error en el registro")
+                                    alert( "Hubo un error en el registro" )
                                 } ) }
                         } }
                     >
