@@ -80,7 +80,7 @@ const VerPublicacionSeleccionada = () => {
                         { comentarios.map( comentario => (
                         <tbody>
                             <tr>
-                                <td>{ comentario.clave_usuario }</td>
+                                <td>{ comentario.nombre_usuario }</td>
                                 <td>{ comentario.comentario }</td>
                             </tr>
                         </tbody>
