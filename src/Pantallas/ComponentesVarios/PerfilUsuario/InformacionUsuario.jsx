@@ -1,14 +1,18 @@
-import { Container, Form } from "react-bootstrap";
+import { Container, Form, Image, Row } from "react-bootstrap";
 import ImagenPerfil from "../../../Imagenes/UsuarioImagen.svg";
 
 const InformacionUsuario = ( props ) => {
     return (
         <Container className="Capsula" id="InformacionUsuarioPrincipal">
             <Container className="Capsula" id="InformacionUsuarioCabeza">
-                <img className="ProfileImage" src={ ImagenPerfil } alt="ImagenPerfil" ></img>
-                <Form>
-                    <Form.Label className="FormLabel" id="Username">{ props.datos.nombre_usuario }</Form.Label>
-                </Form>
+                <Row className="InformacionUsuarioCabezaRow" id="ProfileImageRow" >
+                    <Image className="ProfileImage" src={ props.imagenPerfil } alt="ImagenPerfil" roundedCircle></Image>
+                </Row>
+                <Row className="InformacionUsuarioCabezaRow">
+                    <Form>
+                        <Form.Label className="FormLabel" id="Username">{ props.datos.nombre_usuario }</Form.Label>
+                    </Form>
+                </Row>
             </Container>
             <Container className="Capsula" id="InformacionUsuarioCuerpo">
                 <dl>
@@ -27,7 +31,8 @@ const InformacionUsuario = ( props ) => {
 };
 
 InformacionUsuario.defaultProps = {
-    datos: []
+    datos: [],
+    imagenPerfil: ImagenPerfil
 }
 
 export default InformacionUsuario;

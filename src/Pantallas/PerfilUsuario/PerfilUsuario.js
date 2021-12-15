@@ -57,8 +57,8 @@ const PerfilUsuario = () => {
             <Container className="PerfilContent" fluid>
                 <Row className="BodyRow">
                     <Col id="EmptyLeftColumn" sm={ 2 }></Col>
-                    <Col id="UserInfoColumn" sm={ 3 }>
-                        <InformacionUsuario datos={ usuario }/>
+                    <Col id="UserInfoColumn" sm={ 4 }>
+                        <InformacionUsuario datos={ usuario } imagenPerfil={ usuario.foto_perfil }/>
                         <ModifyUserInformation id_usuario={ usuario.clave_usuario } />
                     </Col>
                     <Col id="UserPublicationsColumn" sm={ 5 }>

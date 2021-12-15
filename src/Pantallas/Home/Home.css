@@ -7,10 +7,8 @@ html {
 }
 
 .containerPublicaciones{
-
-   background-color: white;
-   display: flex;
-     
+    background-color: white;
+    display: flex;
     display: grid;
     grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3] 1fr [x4];
     grid-template-rows: 1.5fr 1fr;
