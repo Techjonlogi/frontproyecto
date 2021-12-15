@@ -2,12 +2,6 @@
     background-color: #242230;
 }
 
-#row {
-    background-color: #242230;
-    width: 100%;
-    max-height: 75px;
-}
-
 .BrandColumn {
     max-height: 75px;
 }
@@ -63,4 +57,10 @@
 
 #SearchBar:focus {
     color: white;
+}
+
+#row {
+    background-color: #242230;
+    width: 100%;
+    max-height: 75px;
 }
