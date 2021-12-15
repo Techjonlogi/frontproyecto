@@ -2,7 +2,7 @@
     background-color: #607397;
     border-radius: 5%;
     height: 19rem;
-    
+    width: 14rem;
 }
 
 .buttonCard{
@@ -11,4 +11,5 @@
 
 .ImageCard{
     border-radius: 10%;
+    height: 210px;
 }

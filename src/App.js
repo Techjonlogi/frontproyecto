@@ -17,16 +17,16 @@ function App() {
    <BrowserRouter>
    <Routes>
      <Route exact path="/" element={ <Home /> }></Route>
-     <Route exact path="Home" element={ <Home /> }></Route>
+     <Route exact path="/Home" element={ <Home /> }></Route>
      <Route exact path="/Login" element={ <PublicRoute /> }>
        <Route exact path="/Login" element={ <Login /> } />
      </Route>
      <Route exact path="/Register" element={ <PublicRoute /> }>
        <Route exact path="/Register" element={ <UserRegistry /> }></Route>
      </Route>
-     <Route exact path="Busqueda/:search_query" element={ <Busqueda /> }></Route>
-     <Route exact path="Perfil/:id_usuario" element={ <PerfilUsuario /> }></Route>
-     <Route exact path="PublicacionSeleccionada/:idPublicacion" element ={ <VerPublicacionSeleccionada /> }></Route> 
+     <Route exact path="/Busqueda/:search_query" element={ <Busqueda /> }></Route>
+     <Route exact path="/Perfil/:id_usuario" element={ <PerfilUsuario /> }></Route>
+     <Route exact path="/PublicacionSeleccionada/:idPublicacion" element ={ <VerPublicacionSeleccionada /> }></Route> 
      <Route exact path="/Publicar" element={ <PrivateRoute /> }>
        <Route exact path="/Publicar" element={ <CrearPublicacion /> }/>
      </Route>
