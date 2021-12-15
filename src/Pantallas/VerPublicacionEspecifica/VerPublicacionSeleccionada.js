@@ -11,27 +11,19 @@ import PublicationDetails from "../ComponentesVarios/VerPublicacionSeleccionada/
 
 const VerPublicacionSeleccionada = () => {
     const { idPublicacion } = useParams();
-    const [ publicacion, setPublicacion ] = useState( { clave_publicacion:'',nombre_publicacion: '',descripcion: '',calificacion_general:'',categoria: '', multimedia: '',fecha_publicacion:''} );
+    const [ publicacion, setPublicacion ] = useState( [] );
     const [ comentarios, setComentarios ] = useState( [] );
 
-    const llenarPagina= async()=>{
-        let publicacionbase = {clave_publicacion:'',nombre_publicacion: '',descripcion: '',calificacion_general:'',categoria: '', multimedia: '',fecha_publicacion:''};
-        let multimedia={ clave_multimedia:'',clave_publicacion:'',multimedia:''}
+    const llenarPagina = async () => {
         await Api.get( Endpoints.publicaciones + "/" + idPublicacion ).then( ( res ) => {
-            publicacionbase = res.data
+            setPublicacion( res.data );
+            console.log( res.data );
         } ).catch( ( e ) =>
             alert("No se pudo recuperar la publicacion") 
         );
-
-        await Api.get( Endpoints.multimedia + "/" + idPublicacion + Endpoints.obtenerMultimediaEspecifica
-        ).then( ( res ) => {
-            multimedia = res.data;
-            publicacionbase.multimedia = multimedia.multimedia;
-            setPublicacion( publicacionbase );
-        } ).catch( ( e ) => alert( "No se pudo cargar la imagen de la publicacion" ) );
     }
 
-    const llenarComentarios = async()=>{
+    const llenarComentarios = async () => {
         await Api.get( Endpoints.comentario + "/" + idPublicacion ).then( ( res ) => {
             setComentarios( res.data );
         } ).catch( ( e ) => (
