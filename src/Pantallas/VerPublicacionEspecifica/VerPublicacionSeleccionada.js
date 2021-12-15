@@ -1,7 +1,7 @@
 import '../VerPublicacionEspecifica/VerPublicacion.css'
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import NavBar from "../ComponentesVarios/BarraNavegacion/NavBar";
 import Api from "../ComponentesVarios/Utilidades/Api/Api";
 import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
@@ -47,7 +47,7 @@ const VerPublicacionSeleccionada = () => {
     return(
         <>
             <NavBar />
-            <section className="seccionPublicacion">
+            <Container className="seccionPublicacion">
                 <Row>
                 <Col>
                     <PublicationDetails publicacion={ publicacion }/>
@@ -56,13 +56,15 @@ const VerPublicacionSeleccionada = () => {
                     <img className="SelectedImage" src={ publicacion.multimedia } alt="imagen"></img>
                 </Col>
                 </Row>
-            </section>
-            <section className="seccionComentarios">
-                <Row className="divTablaComentarios">
-                    <CommentTable comentarios={ comentarios }/>
+            </Container>
+            <Container className="seccionComentarios" fluid>
+                <Row className="rowComentarioInput">
                     <UserCommentInput idPublicacion={ idPublicacion }/>
                 </Row>
-            </section>
+                <Row className="rowTablaComentarios">
+                    <CommentTable comentarios={ comentarios }/>
+                </Row>
+            </Container>
         </>
     );
 };
