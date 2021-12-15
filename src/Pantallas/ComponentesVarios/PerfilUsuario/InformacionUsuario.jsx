@@ -1,4 +1,4 @@
-import { Container, Form, Image, Row } from "react-bootstrap";
+import { Container, Form, Row } from "react-bootstrap";
 import ImagenPerfil from "../../../Imagenes/UsuarioImagen.svg";
 import ProfileImage from "./ProfileImage";
 
