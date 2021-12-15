@@ -1,6 +1,5 @@
-import React from 'react';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import PrivateRoute from './Pantallas/ComponentesVarios/ProtectedRoutes/PrivateRoute';
 import PublicRoute from './Pantallas/ComponentesVarios/ProtectedRoutes/PublicRoute';
 import Home from './Pantallas/Home/Home';
