@@ -1,12 +1,13 @@
 import { Container, Form, Image, Row } from "react-bootstrap";
 import ImagenPerfil from "../../../Imagenes/UsuarioImagen.svg";
+import ProfileImage from "./ProfileImage";
 
 const InformacionUsuario = ( props ) => {
     return (
         <Container className="Capsula" id="InformacionUsuarioPrincipal">
             <Container className="Capsula" id="InformacionUsuarioCabeza">
                 <Row className="InformacionUsuarioCabezaRow" id="ProfileImageRow" >
-                    <Image className="ProfileImage" src={ props.imagenPerfil } alt="ImagenPerfil" roundedCircle></Image>
+                    <ProfileImage fotoPerfil={ props.imagenPerfil }/>
                 </Row>
                 <Row className="InformacionUsuarioCabezaRow">
                     <Form>
