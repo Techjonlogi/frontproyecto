@@ -9,7 +9,7 @@ import Endpoints from "../ComponentesVarios/Utilidades/Api/ApiEndpoints";
 import ComentariInputSchema from "../ComponentesVarios/Utilidades/ValidationSchemas/ComentariInputSchema";
 import ConfigNoAuth from "../ComponentesVarios/Utilidades/Api/Configurations/ConfigNoAuth";
 
-const VerpublicacionEspecifica = () => {
+const VerPublicacionSeleccionada = () => {
     const { idPublicacion } = useParams();
     const [ publicacion, setPublicacion ] = useState( { clave_publicacion:'',nombre_publicacion: '',descripcion: '',calificacion_general:'',categoria: '', multimedia: '',fecha_publicacion:''} );
     const [ comentarios,setComentarios ] = useState( [] );
@@ -130,4 +130,4 @@ const VerpublicacionEspecifica = () => {
     );
 }
 
-export default VerpublicacionEspecifica;
+export default VerPublicacionSeleccionada;
