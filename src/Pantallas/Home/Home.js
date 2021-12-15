@@ -30,7 +30,7 @@ const Home = () => {
       <Container className="containerPublicaciones">
         { publicaciones.map( ( publicacion ) => (
             <div>
-              <CardPublicacion key={ publicacion.clave_publicacion } publication={ publicacion }/>
+              <CardPublicacion key={ publicacion.clave_publicacion } clave_publicacion={ publicacion.clave_publicacion } multimedia={ publicacion.multimedia }/>
             </div>
         ) ) }
       </Container>
